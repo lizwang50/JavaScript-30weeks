@@ -1,0 +1,55 @@
+.clock{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 50%;
+  p{
+    font-size: 28px;
+  }
+  .number-12{
+    position: absolute;
+    top:2%;
+    left:46%;
+    }
+  .number-3{
+    position: absolute;
+    top:45%;
+    right:2%;
+    }
+  .number-6{
+    position: absolute;
+    bottom: 0;
+    left:48%;
+    }
+  .number-9{
+    position: absolute;
+    top: 45%;
+    left:2%;
+  }
+    .clock-face{
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .hand{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    background: #333;
+    transform: rotate(90 deg);
+    transform-origin: bottom;
+  }
+  .second-hand{
+    width: 3px;
+    height: 48%;
+  }
+  .min-hand{
+    width: 4px;
+    height: 40%;
+  }
+  .hour-hand{
+    width: 6px;
+    height: 25%;
+  }
+}
