@@ -4,29 +4,89 @@ html,body {
 
 }
 
-.clock {
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  border: 1px solid black;
+body {
+  height: 100vh;
+  width: 100%;
+  background: rgb(237,235,242);
+  background: -webkit-linear-gradient(bottom, rgba(237,235,242,1) 0%, rgba(249,248,250,1) 100%);
+  background: -o-linear-gradient(bottom, rgba(237,235,242,1) 0%, rgba(249,248,250,1) 100%);
+  background: linear-gradient(to top, rgba(237,235,242,1) 0%, rgba(249,248,250,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  font-family: 'Heebo', sans-serif;
+}
+
+.container {
+  background: rgb(247,237,237);
+  background: linear-gradient(0deg, rgb(255, 247, 251) 0%, rgb(255, 255, 255) 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0px 6px 19px rgba(178, 177, 198, 0.34);
+}
+
+.clock {
+  width: 18rem;
+  height: 18rem;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+
 }
 
 .clock-face {
   position: relative;
-  width: 100%;
-  height: 100%;
-  border: 1px solid blue;
-  transform: translateY(-3px); /* account for the height of the clock hands */
+  width: 90%;
+  height: 90%;
+  /*transform: translateY(-3px);   account for the height of the clock hands */
 }
 .hand {
   width: 50%;
   height: 2px;
-  background: blue;
+  background-color: #fff;
   position: absolute;
   top: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #ffb4c8;
   /*transform: rotate(90deg);*/
   transform-origin: 100%; /*將指針定位在右邊為中心旋轉*/
   transition: 0.1s;
   transition-timing-function: cubic-bezier(0.63, 0.59, 1, 1.93);
+}
+
+.hour-hand {
+  width: 40%;
+  left: 10%;
+  height: 5px;
+}
+
+.min-hand {
+  width: 45%;
+  left: 5%;
+  height: 3px;
+}
+
+.clock-center {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #ffb4c8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -28%);
+  background-color: #fff;
+}
+
+small {
+  position: fixed;
+  bottom: 20px;
+  color: #888888;
+  letter-spacing: 0.05rem;
+  text-align: center;
 }
