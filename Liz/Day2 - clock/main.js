@@ -17,13 +17,13 @@ const setDate = () => {
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
   secondNumber.innerHTML = secondsNormal;
 
-  const mins = now.getMinutes() + now.getSeconds()/60;
+  const mins = now.getMinutes() + seconds/60;
   const minutesDegrees = ((mins / 60 ) * 360 );
   minHand.style.transform = `rotate(${minutesDegrees}deg)`;
   minNumber.innerHTML = minsNormal;
   //console.log(mins);
 
-  const hours = now.getHours() + now.getMinutes()/60;
+  const hours = now.getHours() + mins/60;
   const hoursDegrees = ((hours / 12 ) * 360 );
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   hourNumber.innerHTML = hoursNormal;
