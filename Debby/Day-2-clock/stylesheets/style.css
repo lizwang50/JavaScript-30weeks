@@ -1,0 +1,32 @@
+html,body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+.hand {
+  width: 50%;
+  height: 2px;
+  background: blue;
+  position: absolute;
+  top: 50%;
+  /*transform: rotate(90deg);*/
+  transform-origin: 100%; /*將指針定位在右邊為中心旋轉*/
+  transition: 0.1s;
+  transition-timing-function: cubic-bezier(0.63, 0.59, 1, 1.93);
+}
