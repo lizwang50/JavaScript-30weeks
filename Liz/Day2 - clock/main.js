@@ -12,18 +12,18 @@ const setDate = () => {
   const minsNormal = now.getMinutes();
   const hoursNormal = now.getHours();
 
-  const seconds = now.getSeconds() + now.getMilliseconds()/1000;
+  const seconds = secondsNormal + now.getMilliseconds()/1000;
   const secondsDegrees = ((seconds / 60 ) * 360 );
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
   secondNumber.innerHTML = secondsNormal;
 
-  const mins = now.getMinutes() + seconds/60;
+  const mins = minsNormal + seconds/60;
   const minutesDegrees = ((mins / 60 ) * 360 );
   minHand.style.transform = `rotate(${minutesDegrees}deg)`;
   minNumber.innerHTML = minsNormal;
   //console.log(mins);
 
-  const hours = now.getHours() + mins/60;
+  const hours = hoursNormal + mins/60;
   const hoursDegrees = ((hours / 12 ) * 360 );
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   hourNumber.innerHTML = hoursNormal;
