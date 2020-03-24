@@ -6,19 +6,28 @@
   <title>JS 30 - day 2 - clock</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="./src/css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="col-md-6">
-      <div class="clock mt-5">
+  <h1 class="text-center py-3">JavaScript 30 - Day 2 Clock</h1>
+  <div class="container d-flex justify-content-center">
+    <div class="col-md-8s">
+      <div class="clock">
         <p class="number-12">12</p>
         <p class="number-3">3</p>
         <p class="number-6">6</p>
         <p class="number-9">9</p>
         <div class="clock-face">
-          <div class="hand second-hand"></div>
           <div class="hand min-hand"></div>
           <div class="hand hour-hand"></div>
+          <div class="hand second-hand"></div>
+        </div>
+        <div class="number-clock d-flex justify-content-center mt-3">
+          <p class="hourNumber"></p>
+          <span class="colon-size">:</span>
+          <p class="minNumber"></p>
+          <span class="colon-size">:</span>
+          <p class="secondNumber"></p>
         </div>
       </div>
     </div>
