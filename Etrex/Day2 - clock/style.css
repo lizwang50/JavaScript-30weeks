@@ -1,0 +1,33 @@
+#time {
+  width: 100%;
+  text-align: center;
+}
+
+#clock {
+  width: 600px;
+  height: 600px;
+  border: #eeeeee solid 1px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transform: scale(-1,-1);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #333333;
+  position: absolute;
+  transform: translate(-5px, -5px);
+  top: 300px;
+  left: 300px;
+}
+
+#second .dot {
+  background-color: red;
+}
