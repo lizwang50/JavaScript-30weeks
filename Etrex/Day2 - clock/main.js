@@ -1,12 +1,24 @@
+function initDots(){
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot)=>{
+    dot.renderX = Math.random() * 600;
+    dot.renderY = Math.random() * 600;
+    dot.x = Math.random() * 600;
+    dot.y = Math.random() * 600;    
+  })
+}
+
+initDots();
+
+function noise(){
+  return Math.random() * 40 - 20;
+}
+
 function update(dot, speed){
   dot.renderX += (dot.x - dot.renderX) * speed;
   dot.renderY += (dot.y - dot.renderY) * speed;
   dot.style.top = dot.renderX + "px";
   dot.style.left = dot.renderY + "px";
-}
-
-function noise(){
-  return Math.random() * 40 - 20;
 }
 
 function updateDots(){
@@ -23,40 +35,30 @@ function updateMs(ms){
   update(dot, 1)
 }
 
-function updateSeconds(seconds){
-  const dots = document.querySelectorAll("#second .dot");
-  const length = 250;
-  const gap = length / (dots.length-1);
-  const angle = -2 * Math.PI * seconds / 60;
+function updateHand(selector, length, angle){
+  const dots = document.querySelectorAll(selector);
+  const gap = length / (dots.length - 1);
   for(let i = 0; i < dots.length ; i++){
-    let dot = dots[i];
-    dot.x = Math.cos(angle) * i * gap + 300 + noise();
-    dot.y = Math.sin(angle) * i * gap + 300 + noise();
+    const dot = dots[i];
+    const radius = i * gap;
+    dot.x = Math.cos(angle) * radius + 300 + noise();
+    dot.y = Math.sin(angle) * radius + 300 + noise();
   }
+}
+
+function updateSeconds(seconds){
+  const angle = -2 * Math.PI * seconds / 60;
+  updateHand("#second .dot", 250, angle);
 }
 
 function updateMinutes(minutes){
-  const dots = document.querySelectorAll("#minute .dot");
-  const length = 200;
-  const gap = length / (dots.length-1);
   const angle = -2 * Math.PI * minutes / 60;
-  for(let i = 0; i < dots.length ; i++){
-    let dot = dots[i];
-    dot.x = Math.cos(angle) * i * gap + 300 + noise();
-    dot.y = Math.sin(angle) * i * gap + 300 + noise();
-  }
+  updateHand("#minute .dot", 200, angle);
 }
 
 function updateHours(hours){
-  const dots = document.querySelectorAll("#hour .dot");
-  const length = 100;
-  const gap = length / (dots.length-1);
   const angle = -2 * Math.PI * hours / 12;
-  for(let i = 0; i < dots.length ; i++){
-    let dot = dots[i];
-    dot.x = Math.cos(angle) * i * gap + 300 + noise();
-    dot.y = Math.sin(angle) * i * gap + 300 + noise();
-  }
+  updateHand("#hour .dot", 100, angle);
 }
 
 function updateTime(time){
@@ -84,15 +86,4 @@ function onEnterFrame(){
   updateDots();
 }
 
-function initDots(){
-  const dots = document.querySelectorAll(".dot");
-  dots.forEach((dot)=>{
-    dot.renderX = Math.random()*600;
-    dot.renderY = Math.random()*600;
-    dot.x = Math.random()*600;
-    dot.y = Math.random()*600;    
-  })
-}
-
-initDots();
 setInterval(onEnterFrame, 10);
