@@ -19,11 +19,15 @@ body {
 }
 
 .container {
-  background: rgb(247,237,237);
-  background: linear-gradient(0deg, rgb(255, 247, 251) 0%, rgb(255, 255, 255) 100%);
+  background: rgb(255, 247, 251);
+  background: linear-gradient(0deg, rgb(255, 247, 251) 0%, rgb(250, 248, 248) 100%);
   padding: 3rem;
   border-radius: 20px;
-  box-shadow: 0px 6px 19px rgba(178, 177, 198, 0.34);
+  /*box-shadow: 0px 6px 19px rgba(178, 177, 198, 0.34);*/
+  box-shadow: 5px 10px 14px rgba(233, 219, 225, 0.84),
+              -5px -8px 12px #FFFFFF,
+              inset -5px -6px 13px rgba(203, 186, 199, 0.25),
+              inset 2px 2px 3px #fffcfc;
 }
 
 .clock {
