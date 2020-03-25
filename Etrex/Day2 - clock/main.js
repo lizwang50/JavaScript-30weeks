@@ -49,7 +49,7 @@ function updateMinutes(minutes){
 
 function updateHours(hours){
   const dots = document.querySelectorAll("#hour .dot");
-  const length = 150;
+  const length = 100;
   const gap = length / (dots.length-1);
   const angle = -2 * Math.PI * hours / 12;
   for(let i = 0; i < dots.length ; i++){

@@ -21,7 +21,7 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: #333333;
+  background-color: rgba(0,0,0,0.7);
   position: absolute;
   transform: translate(-5px, -5px);
   top: 300px;
