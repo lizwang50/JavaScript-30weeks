@@ -6,7 +6,7 @@
 #clock {
   width: 600px;
   height: 600px;
-  border: #eeeeee solid 1px;
+  border: #77DBF9 solid 1px;
   border-radius: 100%;
   position: absolute;
   top: 0;
@@ -21,7 +21,7 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.6);
   position: absolute;
   transform: translate(-5px, -5px);
   top: 300px;
@@ -29,5 +29,5 @@
 }
 
 #second .dot {
-  background-color: red;
+  background-color: #77DBF9;
 }
