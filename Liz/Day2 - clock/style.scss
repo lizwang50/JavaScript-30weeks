@@ -32,7 +32,7 @@
     top: 46%;
     left: 5%;
   }
-    .clock-face{
+  .clock-face{
     position: relative;
     height: 100%;
     width: 100%;
@@ -58,5 +58,6 @@
   .hour-hand{
     width: 6px;
     height: 25%;
+    box-shadow: 17px 4px 36px -6px rgba(0,0,0,0.3);
   }
 }

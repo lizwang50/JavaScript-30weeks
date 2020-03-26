@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript-30weeks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/style.min.css">
+    <style>
+      .content-border{
+        position: relative;
+        top: 50%;
+        width: 100%;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+      }
+      a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      a:hover:after { 
+        width: 100%; 
+        left: 0; 
+      }
+    </style>
 </head>
 <body>
-  <a href="./Etrex/Day2 - clock/index.html">卡米der時鐘</a>
-  <a href="./Liz/Day2 - clock/index.html">栗子der時鐘</a>
+  <div class="container mt-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8">
+        <div class="content-border d-flex justify-content-center">
+          <nav class="nav flex-column my-4">
+            <a class="nav-link" href="./Etrex/Day2 - clock/index.html">卡米 der 時鐘</a>
+            <a class="nav-link" href="./Liz/Day2 - clock/index.html">栗子 der 時鐘</a>
+            <a class="nav-link" href="#">Debby der時鐘</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
