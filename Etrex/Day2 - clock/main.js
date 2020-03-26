@@ -67,7 +67,7 @@ function updateTime(time){
 } 
 
 function format(number){
-  if(number > 10)
+  if(number >= 10)
     return number;
   return "0" + number;
 }
