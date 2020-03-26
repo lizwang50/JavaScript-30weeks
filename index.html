@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript-30weeks</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/css/style.min.css">
     <style>
       .content-border{
         position: relative;
-        top: 50%;
+        top: 20%;
         width: 100%;
-        border: 1px solid #e7e7e7;
+        border: 1px solid #004085;
         border-radius: 5px;
       }
-      a:after {    
-        background: none repeat scroll 0 0 transparent;
-        bottom: 0;
+      .hover-border:after {    
         content: "";
         display: block;
-        height: 2px;
+        height: 1px;
         left: 50%;
-        position: absolute;
-        background: #fff;
+        background: #004085;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
       }
-      a:hover:after { 
+      .hover-border:hover:after { 
         width: 100%; 
         left: 0; 
       }
@@ -36,11 +32,12 @@
   <div class="container mt-4">
     <div class="row d-flex justify-content-center">
       <div class="col-md-8">
+        <h1>慶祝蛋炒飯成功 :D</h1>
         <div class="content-border d-flex justify-content-center">
           <nav class="nav flex-column my-4">
-            <a class="nav-link" href="./Etrex/Day2 - clock/index.html">卡米 der 時鐘</a>
-            <a class="nav-link" href="./Liz/Day2 - clock/index.html">栗子 der 時鐘</a>
-            <a class="nav-link" href="#">Debby der時鐘</a>
+            <a class="nav-link hover-border" href="./Etrex/Day2 - clock/index.html">卡米 der 時鐘</a>
+            <a class="nav-link hover-border" href="./Liz/Day2 - clock/index.html">栗子 der 時鐘</a>
+            <a class="nav-link hover-border" href="#">Debby der 時鐘</a>
           </nav>
         </div>
       </div>
