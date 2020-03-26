@@ -30,8 +30,8 @@ function updateDots(){
 
 function updateMs(ms){
   const dot = document.querySelector("#ms .dot");
-  dot.x = Math.cos(-2 * Math.PI * ms / 1000) * 300 + 300;
-  dot.y = Math.sin(-2 * Math.PI * ms / 1000) * 300 + 300;
+  dot.x = Math.cos(2 * Math.PI * ms / 1000) * 300 + 300;
+  dot.y = Math.sin(2 * Math.PI * ms / 1000) * 300 + 300;
   update(dot, 1)
 }
 
@@ -47,17 +47,17 @@ function updateHand(selector, length, angle){
 }
 
 function updateSeconds(seconds){
-  const angle = -2 * Math.PI * seconds / 60;
+  const angle = 2 * Math.PI * seconds / 60;
   updateHand("#second .dot", 250, angle);
 }
 
 function updateMinutes(minutes){
-  const angle = -2 * Math.PI * minutes / 60;
+  const angle = 2 * Math.PI * minutes / 60;
   updateHand("#minute .dot", 200, angle);
 }
 
 function updateHours(hours){
-  const angle = -2 * Math.PI * hours / 12;
+  const angle = 2 * Math.PI * hours / 12;
   updateHand("#hour .dot", 100, angle);
 }
 
