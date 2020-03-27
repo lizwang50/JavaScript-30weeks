@@ -13,6 +13,10 @@ html, body, #app {
   text-align: center;
 }
 
+.app-content {
+  height: 100%;
+}
+
 .clock {
   position: absolute;
   left: 50vw;
