@@ -6,14 +6,29 @@ function noise(){
 }
 
 /**
+ * clock init
+ */
+const clock = document.querySelector("#clock");
+let clockSize = 600;
+let clockRadius = clockSize/2;
+function initClock(){
+  clockSize = Math.min(window.innerWidth, window.innerHeight) * 0.8;
+  clockRadius = clockSize/2;
+  clock.style.width = `${clockSize}px`;
+  clock.style.height = `${clockSize}px`;
+}
+window.addEventListener('resize', initClock);
+initClock()
+
+/**
  * mouse tracker
  */
 let mouseX = 1000;
 let mouseY = 1000;
 function onMouseMove(event){
-  const clock = document.querySelector("#clock").getBoundingClientRect();
-  mouseX = event.pageX - clock.x;
-  mouseY = event.pageY - clock.y;
+  const clockRect = clock.getBoundingClientRect();
+  mouseX = event.pageX - clockRect.x;
+  mouseY = event.pageY - clockRect.y;
 }
 document.addEventListener("mousemove", onMouseMove)
 
@@ -23,17 +38,16 @@ function onClick(){
 }
 document.addEventListener("click", onClick)
 
-
 /**
  * dots init
  */
 function initDots(){
   const dots = document.querySelectorAll(".dot");
   dots.forEach((dot)=>{
-    dot.renderX = Math.random() * 600;
-    dot.renderY = Math.random() * 600;
-    dot.x = Math.random() * 600;
-    dot.y = Math.random() * 600;    
+    dot.renderX = Math.random() * clockSize;
+    dot.renderY = Math.random() * clockSize;
+    dot.x = Math.random() * clockSize;
+    dot.y = Math.random() * clockSize;    
   })
 }
 initDots();
@@ -73,8 +87,8 @@ function updateDots(){
 
 function updateMs(ms){
   const dot = document.querySelector("#ms .dot");
-  dot.x = Math.cos(2 * Math.PI * ms / 1000 - 0.5 * Math.PI) * 300 + 300;
-  dot.y = Math.sin(2 * Math.PI * ms / 1000 - 0.5 * Math.PI) * 300 + 300;
+  dot.x = Math.cos(2 * Math.PI * ms / 1000 - 0.5 * Math.PI) * clockRadius + clockRadius;
+  dot.y = Math.sin(2 * Math.PI * ms / 1000 - 0.5 * Math.PI) * clockRadius + clockRadius;
   update(dot, 1)
 }
 
@@ -84,24 +98,24 @@ function updateHand(selector, length, angle){
   for(let i = 0; i < dots.length ; i++){
     const dot = dots[i];
     const radius = i * gap;
-    dot.x = Math.cos(angle - 0.5 * Math.PI) * radius + 300 + noise();
-    dot.y = Math.sin(angle - 0.5 * Math.PI) * radius + 300 + noise();
+    dot.x = Math.cos(angle - 0.5 * Math.PI) * radius + clockRadius + noise();
+    dot.y = Math.sin(angle - 0.5 * Math.PI) * radius + clockRadius + noise();
   }
 }
 
 function updateSeconds(seconds){
   const angle = 2 * Math.PI * seconds / 60;
-  updateHand("#second .dot", 250, angle);
+  updateHand("#second .dot", clockRadius*5/6, angle);
 }
 
 function updateMinutes(minutes){
   const angle = 2 * Math.PI * minutes / 60;
-  updateHand("#minute .dot", 200, angle);
+  updateHand("#minute .dot", clockRadius*4/6, angle);
 }
 
 function updateHours(hours){
   const angle = 2 * Math.PI * hours / 12;
-  updateHand("#hour .dot", 100, angle);
+  updateHand("#hour .dot", clockRadius*2/6, angle);
 }
 
 function updateTime(time){
