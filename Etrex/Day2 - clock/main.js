@@ -15,6 +15,14 @@ function onMouseMove(event){
   mouseX = event.pageX - clock.x;
   mouseY = event.pageY - clock.y;
 }
+document.addEventListener("mousemove", onMouseMove)
+
+let clickCount = 0;
+function onClick(){
+  clickCount++;
+}
+document.addEventListener("click", onClick)
+
 
 /**
  * dots init
@@ -43,10 +51,15 @@ function update(dot, speed){
   const dy = dot.renderY - mouseY;
   const distance = Math.sqrt(dx * dx + dy * dy);
 
-  const blur = Math.min(distance/100, 2);
+  let blur;
+  if(clickCount % 2 == 0){
+    blur = Math.min(distance/100, 2);
+  }else{
+    blur = Math.max(2 - distance/100, 0);
+  }
   dot.style.filter = `blur(${blur}px)`;
 
-  let scale = Math.min(Math.max(distance/100, 1),3);
+  let scale = blur + 1;
   dot.style.transform = `translate(-5px, -5px) scale(${scale})`;
 }
 
@@ -117,5 +130,3 @@ function onEnterFrame(){
 }
 
 setInterval(onEnterFrame, 10);
-
-document.addEventListener("mousemove", onMouseMove)
