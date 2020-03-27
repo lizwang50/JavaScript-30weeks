@@ -1,3 +1,24 @@
+/**
+ * util
+ */
+function noise(){
+  return Math.random() * 40 - 20;
+}
+
+/**
+ * mouse tracker
+ */
+let mouseX = 1000;
+let mouseY = 1000;
+function onMouseMove(event){
+  const clock = document.querySelector("#clock").getBoundingClientRect();
+  mouseX = event.pageX - clock.x;
+  mouseY = event.pageY - clock.y;
+}
+
+/**
+ * dots init
+ */
 function initDots(){
   const dots = document.querySelectorAll(".dot");
   dots.forEach((dot)=>{
@@ -7,19 +28,28 @@ function initDots(){
     dot.y = Math.random() * 600;    
   })
 }
-
 initDots();
 
-function noise(){
-  return Math.random() * 40 - 20;
-}
-
+/**
+ * set dot style
+ */
 function update(dot, speed){
   dot.renderX += (dot.x - dot.renderX) * speed;
   dot.renderY += (dot.y - dot.renderY) * speed;
-  dot.style.top = dot.renderX + "px";
-  dot.style.left = dot.renderY + "px";
+  dot.style.left = dot.renderX + "px";
+  dot.style.top = dot.renderY + "px";
+
+  const dx = dot.renderX - mouseX;
+  const dy = dot.renderY - mouseY;
+  const distance = Math.sqrt(dx * dx + dy * dy);
+
+  const blur = Math.min(distance/100, 2);
+  dot.style.filter = `blur(${blur}px)`;
+
+  let scale = Math.min(Math.max(distance/100, 1),3);
+  dot.style.transform = `translate(-5px, -5px) scale(${scale})`;
 }
+
 
 function updateDots(){
   const dots = document.querySelectorAll(".dot");
@@ -30,8 +60,8 @@ function updateDots(){
 
 function updateMs(ms){
   const dot = document.querySelector("#ms .dot");
-  dot.x = Math.cos(2 * Math.PI * ms / 1000) * 300 + 300;
-  dot.y = Math.sin(2 * Math.PI * ms / 1000) * 300 + 300;
+  dot.x = Math.cos(2 * Math.PI * ms / 1000 - 0.5 * Math.PI) * 300 + 300;
+  dot.y = Math.sin(2 * Math.PI * ms / 1000 - 0.5 * Math.PI) * 300 + 300;
   update(dot, 1)
 }
 
@@ -41,8 +71,8 @@ function updateHand(selector, length, angle){
   for(let i = 0; i < dots.length ; i++){
     const dot = dots[i];
     const radius = i * gap;
-    dot.x = Math.cos(angle) * radius + 300 + noise();
-    dot.y = Math.sin(angle) * radius + 300 + noise();
+    dot.x = Math.cos(angle - 0.5 * Math.PI) * radius + 300 + noise();
+    dot.y = Math.sin(angle - 0.5 * Math.PI) * radius + 300 + noise();
   }
 }
 
@@ -87,3 +117,5 @@ function onEnterFrame(){
 }
 
 setInterval(onEnterFrame, 10);
+
+document.addEventListener("mousemove", onMouseMove)
