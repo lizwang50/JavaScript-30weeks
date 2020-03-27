@@ -1,0 +1,44 @@
+html, body, #app {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+#loading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.clock {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: rotate(-90deg);
+}
+
+.ring {
+  position: relative;
+}
+.ring .bar {
+  position: absolute;
+  transform-origin: 0 0;
+}
+.ring .bar span.dot {
+  background: black;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 6px;
+  margin-top: -6px;
+  margin-left: auto;
+}
+
+.ring.highlight .bar:first-child span.dot {
+  border: white solid 3px;
+  box-shadow: black 0 0 10px;
+}
