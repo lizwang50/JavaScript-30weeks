@@ -33,8 +33,8 @@ const setDate = () => {
 }
 
 chickHead.addEventListener('click', () => {
-  audio.src = `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=${time.innerText}&tl=en-gb`
-  audio.autoplay = 'autoplay'
+  audio.src = encodeURI(`https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=${time.innerText}&tl=en-gb`);
+  audio.autoplay = 'autoplay';
 });
 
 setInterval(setDate, 10);
