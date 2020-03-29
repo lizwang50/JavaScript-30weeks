@@ -33,7 +33,9 @@ const setDate = () => {
 }
 
 chickHead.addEventListener('click', () => {
-  audio.src = encodeURI(`http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=${time.innerText}&tl=en-gb`);
+  const today = `Chick ${time.innerText.slice(0, 24)}`
+  const url = `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=${today}&tl=en-gb`
+  audio.src = encodeURI(url);
   audio.autoplay = 'autoplay';
 });
 
