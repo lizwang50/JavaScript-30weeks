@@ -1,10 +1,10 @@
 const secondHand = document.querySelector('.second-hand');
 const minsHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
-const time = document.querySelector('.time')
-const dot = document.querySelector('.dot')
-const audio = document.querySelector('.time-audio')
-const chickHead = document.querySelector('.chick-head')
+const time = document.querySelector('.time');
+const dot = document.querySelector('.dot');
+const audio = document.querySelector('.time-audio');
+const chickHead = document.querySelector('.chick-head');
 
 const caculateSeconds = (seconds) => {
   const secondsDegrees = ((seconds / 60) * 360) + 90;
@@ -33,10 +33,10 @@ const setDate = () => {
 }
 
 chickHead.addEventListener('click', () => {
-  const today = `Chick ${time.innerText.slice(0, 24)}`
-  const url = `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=${today}&tl=en-gb`
-  audio.src = encodeURI(url);
-  audio.autoplay = 'autoplay';
+  const msg = new SpeechSynthesisUtterance;
+  msg.text = `${time.innerText.slice(16, 24)} 咕咕`;
+  msg.rate = 2;
+  speechSynthesis.speak(msg);
 });
 
 setInterval(setDate, 10);

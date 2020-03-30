@@ -16,6 +16,7 @@ body {
 
 .chick {
   margin: auto;
+  position: relative;
 }
 
 .triangle {
@@ -24,6 +25,53 @@ body {
   clip-path: polygon(49% 1%, 67% 70%, 82% 0, 100% 100%, 74% 88%, 48% 85%, 20% 90%, 0 100%, 10% 0, 30% 71%);
   height: 100px;
   width: 350px;
+}
+
+.wing {
+  background-color: rgb(243, 203, 72);
+  height: 100px;
+  position: absolute;
+  width: 40px;
+}
+
+.wing-left {
+  border-radius: 100px 25px 100px 25px;
+  transform: rotate(100deg);
+}
+
+.left-up {
+  left: -30px;
+  top: 50%;
+}
+
+.left-middle {
+  left: -15px;
+  top: 55%;
+}
+
+.left-down {
+  left: 5px;
+  top: 60%;
+}
+
+.wing-right {
+  border-radius: 25px 100px 25px 100px;
+  transform: rotate(-100deg);
+}
+
+.right-up {
+  right: -30px;
+  top: 50%;
+}
+
+.right-middle {
+  right: -15px;
+  top: 55%;
+}
+
+.right-down {
+  right: 5px;
+  top: 60%;
 }
 
 .clock {
@@ -79,8 +127,4 @@ body {
   padding: 2rem;
   position: relative;
   width: 1rem;
-}
-
-.time-audio {
-  display: none;
 }
