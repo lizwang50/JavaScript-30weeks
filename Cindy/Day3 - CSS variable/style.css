@@ -1,0 +1,96 @@
+body {
+  text-align: center;
+  font-family: 'PMingLiU';
+  font-weight: 100;
+  font-size: 50px;
+}
+
+:root {
+  --position: 0px;
+  --size: 0px;
+  --color: #ffc600;
+}
+
+.chick {
+  background-color: var(--color);
+  border-radius: 50%;
+  height: var(--size);
+  left: var(--position);
+  padding: 2rem;
+  position: relative;
+  width: var(--size);
+}
+
+.eyes {
+  background-color: black;
+  border-radius: 50%;
+  height: 20%;
+  position: absolute;
+  top: 20%;
+  width: 20%;
+}
+
+.eyes-left {
+  left: 20%;
+}
+
+.eyes-right {
+  right: 20%;
+}
+
+.mouth {
+  background-color: red;
+  border-radius: 50%;
+  height: 10%;
+  left: 45%;
+  position: absolute;
+  top: 50%;
+  width: 10%;
+}
+
+.wing {
+  background-color: var(--color);
+  height: 100px;
+  position: absolute;
+  width: 40px;
+}
+
+.wing-left {
+  border-radius: 100px 25px 100px 25px;
+  transform: rotate(100deg);
+}
+
+.left-up {
+  left: -30px;
+  top: 50%;
+}
+
+.left-middle {
+  left: -15px;
+  top: 55%;
+}
+
+.left-down {
+  left: 5px;
+  top: 60%;
+}
+
+.wing-right {
+  border-radius: 25px 100px 25px 100px;
+  transform: rotate(-100deg);
+}
+
+.right-up {
+  right: -30px;
+  top: 50%;
+}
+
+.right-middle {
+  right: -15px;
+  top: 55%;
+}
+
+.right-down {
+  right: 5px;
+  top: 60%;
+}
