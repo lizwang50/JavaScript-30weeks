@@ -1,0 +1,19 @@
+{
+  "name": "javascript-30",
+  "version": "1.0.0",
+  "description": "命運乖舛的 Repo Q",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizwang50/JavaScript-30weeks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizwang50/JavaScript-30weeks/issues"
+  },
+  "homepage": "https://github.com/lizwang50/JavaScript-30weeks#readme"
+}
