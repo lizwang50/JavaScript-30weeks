@@ -1,19 +1,73 @@
 {
-  "name": "javascript-30",
+  "name": "@codexysoft/gulp-start",
   "version": "1.0.0",
-  "description": "命運乖舛的 Repo Q",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Gulp 4 boilerplate for CSS/HTML/JavaScript development by Codexy Software team.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lizwang50/JavaScript-30weeks.git"
+    "url": "git+https://github.com/codexysoft/gulp-start.git"
   },
-  "author": "",
+  "keywords": [
+    "gulp",
+    "gulp-start",
+    "gulp-boilerplate",
+    "boilerplate",
+    "front-end",
+    "sass",
+    "build",
+    "browserify",
+    "svg",
+    "svg-sprites",
+    "fonts"
+  ],
+  "author": "lmi11",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lizwang50/JavaScript-30weeks/issues"
+    "url": "https://github.com/codexysoft/gulp-start/issues"
   },
-  "homepage": "https://github.com/lizwang50/JavaScript-30weeks#readme"
+  "homepage": "https://github.com/codexysoft/gulp-start#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babelify": "^10.0.0",
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-include": "^2.4.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-ttf2eot": "^1.1.2",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-pngquant": "^8.0.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-svg": "^2.4.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "yargs": "^14.2.0"
+  },
+  "dependencies": {
+    "bourbon": "^6.0.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
