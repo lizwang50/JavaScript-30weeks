@@ -206,4 +206,4 @@ gulp.task('watch', function () {
 
 //Default Gulp task
 
-gulp.task('default', gulp.series('optimizationIMG', 'optimizationSVG', 'svgSymbolSprite', 'svgFragmentsSprite', gulp.parallel('styles', 'pug', 'js'), gulp.parallel('browser-sync', 'watch')));
+gulp.task('default', gulp.series('fonts','optimizationIMG', 'optimizationSVG', 'svgSymbolSprite', 'svgFragmentsSprite', gulp.parallel('styles', 'pug', 'js'), gulp.parallel('browser-sync', 'watch')));

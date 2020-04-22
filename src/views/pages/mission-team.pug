@@ -1,0 +1,71 @@
+extends ../layouts/layout.pug
+
+block title
+  title 黑人問號 JS 社 - Mission-team
+block content
+  .container
+    h1.text-center.font-italic MISSION Team
+    .d-flex.justify-content-center.team-title
+      .underline.mb-3.bg-white
+    .row
+      .col.team-subtitle
+        h5
+          span 擺渡人
+          span.ml-4.text-white 普渡 JS 苦手眾生
+        .underline-1.mb-3.bg-white
+    .row.mb-4
+      mixin member(name,tag,title,href1,href2,href3,href4,intro)
+        .card.bg-dark.custom-cards
+          .d-flex.justify-content-end
+            .card-tag.px-2.py-1= tag
+          .row
+            .col-4
+              img.image-circle.ml-3.rounded-circle(src=href1, alt='Card image cap')
+            .col-8
+              .card-body
+                h5.card-title= name 
+                h5.font-italic.mb-3= title
+                a(href=href2) 
+                  i.text-white.fa-lg.fas.fa-globe
+                a.mx-3(href=href3) 
+                  i.text-white.fa-lg.fab.fa-facebook
+                a(href=href4) 
+                  i.text-white.fa-lg.fab.fa-github
+          p.card-intro.card-text.text-white.m-3.p-3= intro
+      .card-deck
+        +member('卡米','MENTOR','Gaming Streamer','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+        +member('小西瓜','MENTOR','Backend Engineer','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+        +member('笑笑羊','MENTOR','JavaScript Master','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+    .row.mt-5
+      .col.team-subtitle
+        h5
+          span 被擺渡的人
+          span.ml-4.text-white 深陷在 JS 苦海的人們
+        .underline-2.mb-3.bg-white
+    .row
+      mixin member(name,tag,title,href1,href2,href3,href4,intro)
+        .card.bg-dark.custom-cards
+          .d-flex.justify-content-end
+            .card-tag.px-2.py-1= tag
+          .row
+            .col-4
+              img.image-circle.ml-3.rounded-circle(src=href1, alt='Card image cap')
+            .col-8
+              .card-body
+                h5.card-title= name 
+                h5.font-italic.mb-3= title
+                a(href=href2) 
+                  i.text-white.fa-lg.fas.fa-globe
+                a.mx-3(href=href3) 
+                  i.text-white.fa-lg.fab.fa-facebook
+                a(href=href4) 
+                  i.text-white.fa-lg.fab.fa-github
+          p.card-intro.card-text.text-white.m-3.p-3= intro
+      .card-deck
+        +member('卡米','STUDENT','Gaming Streamer','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+        +member('小西瓜','STUDENT','Backend Engineer','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+        +member('笑笑羊','STUDENT','JavaScript Master','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+      .card-deck.my-5
+        +member('卡米','STUDENT','Gaming Streamer','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+        +member('小西瓜','STUDENT','Backend Engineer','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
+        +member('笑笑羊','STUDENT','JavaScript Master','http://unsplash.it/50/50?gravity=center','#','#','#','觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。')
