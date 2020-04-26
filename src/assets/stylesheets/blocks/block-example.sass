@@ -1,0 +1,36 @@
+.block-name
+  +size(400px, 200px)
+  font-size: 20px
+  margin-top: em(100px, 20px)
+
+  +media($tablet)
+    width: 200px
+
+  +media($mobile, min)
+    &:hover
+      width: 150px
+
+  &__input-default
+    &::placeholder
+      color: rgba($black, 0.5)
+
+  &__form
+    top: center
+    display: flex
+    flex: 1
+
+    +media($mobile)
+      left: center
+
+    &--fixed
+      +clearfix
+
+  &__icon
+    width: width('example.svg')
+    height: height('example.svg')
+    background-image: resolve('example.svg')
+    background-image: svg("example", "[color]: black; [stroke]: black; [fill]: black")
+    background-image: url('../img/svg-fragments.svg#ic_check_circle')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center

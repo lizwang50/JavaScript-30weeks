@@ -1,0 +1,54 @@
+extends ../layouts/layout.pug
+
+block title
+  title 黑人問號 JS 社
+block content
+  .container
+    .row
+      .col-sm-3.team
+        h5.font-weight-bold.font-italic.text-white.team-tag.p-2 TEAM
+        mixin team-content(img_src,name)
+          .d-flex.justify-content-center
+            img.rounded-circle(src= img_src , alt='Card image cap')
+          .team-member.my-2
+            p.text-white.text-center
+              span.team-member-name= name
+        .team-content
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+          +team-content('http://unsplash.it/100/100?gravity=center','Debby')
+      .col-sm-9
+        .row
+          .col-6.d-flex.align-items-center
+            span.h3 [
+            p.mb-2
+              span.text-white.pl-3.mb-1 OUR MISSION ：
+              span.pr-3 教你如何 30 天內放棄 JS
+            span.h3 ]
+          .col-6.d-flex.align-items-center
+            p.text-warning.mb-2
+              span.custom-alerts.p-2 ! WARNING : JavaScript is dangerous !!
+        .main
+          .row
+            .col-6
+              p.main-tag-bg
+                span.px-3.py-1.main-name-tag File from : Debby
+            .col-6
+              p.mb-2.main-tag-right
+                span.h3 [
+                span.p-3.mx-2 JS 很可怕！
+                span.h3 ]
+          .row
+            .col-4
+              - var values = ['JavaScript Drum Kit', 'JS and CSS Clock', 'CSS Variables','Array Cardio Day 1'];
+              ul
+                each val, index in values
+                  li.mt-3
+                    a(href="")= 'Day#0' + (index+1) + '｜'
+                      span.text-white.font-weight-bold= val
+            .col-4
+            .col-4

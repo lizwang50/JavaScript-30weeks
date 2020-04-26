@@ -1,0 +1,7 @@
+=media($value, $min: false)
+  @media only screen and(if($min, min-width, max-width): $value)
+    @content
+
+=icon($value)
+  &--#{$value}
+    background-image: svg("#{$value}")
