@@ -1,0 +1,130 @@
+html {
+  background-size: cover;
+  font-family: 'helvetica neue';
+  font-size: 10px;
+  text-align: center;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  flex: 1;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.chick {
+  margin: auto;
+  position: relative;
+}
+
+.triangle {
+  background-color: red;
+  -webkit-clip-path: polygon(49% 1%, 67% 70%, 82% 0, 100% 100%, 74% 88%, 48% 85%, 20% 90%, 0 100%, 10% 0, 30% 71%);
+  clip-path: polygon(49% 1%, 67% 70%, 82% 0, 100% 100%, 74% 88%, 48% 85%, 20% 90%, 0 100%, 10% 0, 30% 71%);
+  height: 100px;
+  width: 350px;
+}
+
+.wing {
+  background-color: rgb(243, 203, 72);
+  height: 100px;
+  position: absolute;
+  width: 40px;
+}
+
+.wing-left {
+  border-radius: 100px 25px 100px 25px;
+  transform: rotate(100deg);
+}
+
+.left-up {
+  left: -30px;
+  top: 50%;
+}
+
+.left-middle {
+  left: -15px;
+  top: 55%;
+}
+
+.left-down {
+  left: 5px;
+  top: 60%;
+}
+
+.wing-right {
+  border-radius: 25px 100px 25px 100px;
+  transform: rotate(-100deg);
+}
+
+.right-up {
+  right: -30px;
+  top: 50%;
+}
+
+.right-middle {
+  right: -15px;
+  top: 55%;
+}
+
+.right-down {
+  right: 5px;
+  top: 60%;
+}
+
+.clock {
+  background-color: rgb(243, 203, 72);
+  border-radius: 50%;
+  height: 30rem;
+  padding: 2rem;
+  position: relative;
+  width: 30rem;
+}
+
+.clock-face {
+  height: 100%;
+  position: relative;
+  transform: translateY(-3px);
+  width: 100%;
+}
+
+.hand {
+  background: black;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  width: 50%;
+}
+
+.second-hand {
+  height: 2px;
+}
+
+.hour-hand {
+  right: 50%;
+  width: 30%;
+}
+
+.dot:hover {
+  transform: translateY(-20px) rotate(15deg) scale(1.2);
+}
+
+.chick-head:hover {
+  transform: translateY(20px) rotate(-30deg) scale(5.2);
+}
+
+.dot {
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  height: 1rem;
+  padding: 2rem;
+  position: relative;
+  width: 1rem;
+}
