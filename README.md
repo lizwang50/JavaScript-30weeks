@@ -43,10 +43,8 @@ You should install:
 - Gulp CLI `npm install gulp-cli -g`
 
 After:
-1. [Download ](https://github.com/codexysoft/gulp-start/archive/master.zip) from GitHub
-2. Unzip archive and in command line make `cd` into project folder
-3. Run `npm install`
-4. When it's done installing, run `gulp`
+1. Run `npm install`
+2. When it's done installing, run `gulp`
 
 ## Documentation
 
