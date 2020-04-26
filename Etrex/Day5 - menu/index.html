@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <style>
+    .menu {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 1px;
+      flex: 1;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <img src="./images/1.PNG"/>
+    <img src="./images/2.PNG"/>
+    <img src="./images/3.PNG"/>
+    <img src="./images/4.PNG"/>
+    <img src="./images/5.PNG"/>
+    <img src="./images/6.PNG"/>
+    <img src="./images/7.PNG"/>
+    <img src="./images/8.PNG"/>
+  </div>
+  <script>
+    const images = document.querySelectorAll("img")
+    images.forEach(img=>{
+      img.addEventListener("mouseenter", (e)=>{
+        e.target.style.flex = 2
+      })
+      img.addEventListener("mouseout", (e)=>{
+        e.target.style.flex = 1;
+      })
+    })
+  </script>
+</body>
+</html>
