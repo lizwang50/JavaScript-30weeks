@@ -36,7 +36,7 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-    // const ordered =不要ㄔ不要ㄔㄉㄨㄉㄨ inventors.sort(function (a,b) {
+    // const ordered = inventors.sort(function (a,b) {
     //   if (a.year > b.year) {
     //     return 1 ;
     //   }else{
@@ -48,11 +48,33 @@
     for (let i = 0; i < fullNames.length; i++) {
       sortBirth.innerHTML += `<li>Birth : ${ordered[i].year} - ${ordered[i].first} ${ordered[i].last}</li>`
     }
-    console.log(ordered);
+    // console.log(ordered);
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-
+    const totalYears = inventors.reduce((total, inventor) => {
+      return total + (inventor.passed - inventor.year);
+    }, 0 );
+    const filterTotalYears = document.getElementById('filterTotalYears');
+    filterTotalYears.innerHTML = `<li> Total Yeaer : ${totalYears}</li>`      
+    // console.log(totalYears);
     // 5. Sort the inventors by years lived
+    const inventorsLivedYears = inventors.sort((a,b) => {
+      const lastInventor = a.passed - a.year;      
+      const nextInventor = b.passed - b.year;
+      // return lastInventor > nextInventor ? -1 : 1;
+      if (lastInventor > nextInventor) {
+        return -1
+      } else {
+        return 1 
+      }
+    });
+    const sortInventors = document.getElementById('sortInventors');
+    for (let i = 0; i < inventorsLivedYears.length; i++) {
+      sortInventors.innerHTML += `<li> Name: ${inventorsLivedYears[i].first} ${inventorsLivedYears[i].last}</li>`
+    }
+    
+    console.log(inventorsLivedYears);
+    
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
