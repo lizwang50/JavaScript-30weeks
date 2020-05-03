@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex chicks 💪</title>
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .chicks {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .chick {
+      align-self: center;
+      transition: all 1s 0s;
+      flex: 1;
+    }
+
+    .chick.transform {
+      transform: rotate(180deg);
+      flex: 0.5;
+    }
+
+    .chick.opacity {
+      opacity: 0.5;
+    }
+  </style>
+
+  <div class="chicks">
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+    <img class="chick" alt="chick" src="https://i.imgur.com/mU42sAd.png" />
+  </div>
+
+  <script>
+    const chicks = document.querySelectorAll('.chick');
+
+    function toggleOpacity() {
+      this.classList.toggle('opacity');
+    }
+
+    function toggleTransform(e) {
+      if (e.propertyName === 'opacity') {
+        e.target.classList.toggle('transform');
+      }
+    }
+
+    chicks.forEach(chick => chick.addEventListener('mouseover', toggleOpacity));
+    chicks.forEach(chick => chick.addEventListener('transitionend', toggleTransform));
+  </script>
+
+</body>
+</html>
