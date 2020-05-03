@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+  <script>
+    const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+    const places = [];
+    fetch(endpoint)  // 下載 endpoint
+      //then 是為了解決波動拳問題
+      .then(blob => blob.json())          //blob 是任何的檔案類型(二進位大型)，取裡面的 json 
+      .then(data => places.push(...data)) //使用 push 把 data 裡面的資料塞進去 places 這個空陣列( `...` ：如果不用 ... 的話會把整個陣列塞進去原本的陣列裡。)
+
+    function findMatches(wordToMatch, places) { //wordToMatch 是一個字串型態的變數，places 是一個陣列，兩者在這個 findMatches 去比較
+      return places.filter(place => { //這個 function 會 return 一個 filter (篩選)比較過後的陣列
+        const regex = new RegExp(wordToMatch, 'gi'); // RegExp 正規表示法。wordToMatch 是使用者輸入不知道是什麼的變數。
+        return place.city.match(regex) || place.state.match(regex); 
+        //比較這個陣列裡面的 city 和 state 和使用者輸入的變數是否一致
+        //如果一致就回傳一個新的陣列。        
+      })
+    }
+    function displayMatches(params) {
+      
+    }
+    const searchInput = document.querySelector('.search');
+    const suggestions = document.querySelector('.suggestions');
+    searchInput.addEventListener('change',displayMatches);
+  </script>
+</body>
+
+</html>
