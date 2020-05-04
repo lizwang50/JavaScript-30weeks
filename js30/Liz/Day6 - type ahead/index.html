@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <h1>Day - 6 - Type Ahead</h1>
   <form class="search-form">
     <input type="text" class="search" placeholder="City or State">
     <ul class="suggestions">
@@ -21,7 +22,7 @@
     const places = [];
     fetch(endpoint)  // 下載 endpoint
       //then 是為了解決波動拳問題
-      .then(blob => blob.json())          //blob 是任何的檔案類型(二進位大型)，取裡面的 json 
+      .then(blob => blob.json())          //blob 是任何的檔案類型(二進位大型什麼東東的)，取裡面的 json 
       .then(data => places.push(...data)) //使用 push 把 data 裡面的資料塞進去 places 這個空陣列( `...` ：如果不用 ... 的話會把整個陣列塞進去原本的陣列裡。)
 
     function findMatches(wordToMatch, places) { //wordToMatch 是一個字串型態的變數，places 是一個陣列，兩者在這個 findMatches 去比較
@@ -32,12 +33,29 @@
         //如果一致就回傳一個新的陣列。        
       })
     }
-    function displayMatches(params) {
-      
+    function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+    function displayMatches() {
+      const matchArray = findMatches(this.value, places);
+      // matchArray 帶入使用者輸入的 value，並且和 places 這個陣列做比較。
+      const html = matchArray.map(place => {
+        const regex = new RegExp(this.value, 'gi');
+        const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+        const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
+        return `
+          <li>
+            <span class="name">${cityName}, ${stateName}</span>
+            <span class="population">${numberWithCommas(place.population)}</span>            
+          </li>
+        `;
+      }).join('');
+      suggestions.innerHTML = html;
     }
     const searchInput = document.querySelector('.search');
     const suggestions = document.querySelector('.suggestions');
     searchInput.addEventListener('change',displayMatches);
+    searchInput.addEventListener('keyup',displayMatches);
   </script>
 </body>
 
