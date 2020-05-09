@@ -58,6 +58,17 @@ a:hover {
 .navbar .navbar-brand:hover {
   color: white !important;
 }
+.navbar .navbar-toggler {
+  border: none;
+  font-size: 1.3rem;
+}
+.navbar .navbar-collapse.show {
+  margin-top: 10px;
+  padding-right: 14px;
+}
+.navbar .navbar-collapse.show .nav-item a {
+  text-align: right;
+}
 
 .team-member-avatar {
   object-fit: cover;
@@ -68,9 +79,14 @@ a:hover {
 
 /*  pages   */
 /*  index   */
-.custom-alerts {
+.rwd-close-mobile {
+  margin-top: 130px;
+}
+.rwd-close-mobile .custom-alerts {
   background-color: rgba(255, 184, 47, 0.1);
   border-radius: 4px;
+  display: inline-block;
+  margin: auto 0;
 }
 
 .page-home .project-folders {

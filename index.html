@@ -16,8 +16,8 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand font-weight-bold text-primary" href="./">黑人問號 JS 社</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler text-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
@@ -35,7 +35,8 @@
         </div>
       </nav>
     </header>
-    <div class="container d-none d-sm-none d-md-block">
+
+    <div class="container d-none d-md-block">
 
       <div class="row position-relative">
         <div class="sidebar-team col-3">
@@ -1057,14 +1058,13 @@
       </div>
     </div>
 
-
     <!-- RWD -->
-    <div class="container d-sm-block d-md-none">
-      <div class="row d-flex justify-content-center">
-        <div class="col-4">
-          <div class="custom-alerts">
-            <p class="text-center mb-0">🚨</p>
-            <p class="text-warning text-center">! WARNING !</p>
+    <div class="container d-block d-md-none rwd-close-mobile">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center mb-5">
+          <div class="custom-alerts p-3 pt-4">
+            <h4 class="text-center mb-2">🚨</h4>
+            <h3 class="text-warning text-center">! WARNING !</h3>
           </div>
         </div>
         <div class="col-12">
