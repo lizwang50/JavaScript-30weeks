@@ -8,16 +8,16 @@
     <script src="https://kit.fontawesome.com/613aca3582.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <title>黑人問號 JS 社</title>
   </head>
-  <body>
+  <body class="page-home">
     <!-- navbar -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand font-weight-bold" href="./">黑人問號 JS 社</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand font-weight-bold text-primary" href="./">黑人問號 JS 社</a>
+        <button class="navbar-toggler text-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
@@ -36,64 +36,71 @@
       </nav>
     </header>
 
-    <div class="container d-none d-sm-none d-md-block">
-      <div class="row">
+    <div class="container d-none d-md-block">
 
-        <!-- leftside - teammenber -->
-        <div class="col-sm-3 team">
-          <h5 class="font-weight-bold font-italic text-white team-tag p-2">TEAM</h5>
+      <div class="row position-relative">
+        <div class="sidebar-team col-3">
+          <h5 class="font-weight-bold font-italic text-white team-tag">TEAM</h5>
+          <div class="team-member-list list-group py-5" id="list-tab" role="tablist">
 
-          <div class="nav flex-column nav-pills team-content" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-
-            <a class="nav-link team-member" id="v-pills-etrex-tab" data-toggle="pill" href="#v-pills-etrex" role="tab" aria-controls="v-pills-etrex" aria-selected="true">
-              <div class="d-flex justify-content-center">
-                <img class="rounded-circle image-circle w-50" src="./img/kami.jpg">
-              </div>
-              <div class="text-center">
-                <span class="team-member-name">Etrex</span>
-              </div>
+            <!-- Etrex -->
+            <a class="team-member-item text-center mb-4 active"
+              data-toggle="list" href="#etrex-folder" role="tab">
+              <img class="team-member-avatar rounded-circle image-circle w-50 mb-3" src="/images/kami.jpg">
+              <p>Etrex</p>
             </a>
 
-            <a class="nav-link team-member" id="v-pills-cindy-tab" data-toggle="pill" href="#v-pills-cindy" role="tab" aria-controls="v-pills-cindy" aria-selected="false">
-              <div class="d-flex justify-content-center">
-                <img class="rounded-circle image-circle w-50" src="./img/cindy.jpg">
-              </div>
-              <div class="text-center">
-                <span class="team-member-name">Cindy</span>
-              </div>
+            <!-- 小西瓜 -->
+            <a class="team-member-item text-center mb-4"
+              data-toggle="list" href="#leo-folder" role="tab">
+              <img class="team-member-avatar rounded-circle image-circle w-50 mb-3" src="/images/leo.jpg">
+              <p>小西瓜</p>
             </a>
 
-            <a class="nav-link team-member" id="v-pills-debby-tab" data-toggle="pill" href="#v-pills-debby" role="tab" aria-controls="v-pills-debby" aria-selected="false">
-              <div class="d-flex justify-content-center">
-                <img class="rounded-circle image-circle w-50" src="./img/debby.jpg">
-              </div>
-              <div class="text-center">
-                <span class="team-member-name">Debby</span>
-              </div>
+            <!-- Cindy -->
+            <a class="team-member-item text-center mb-4"
+              data-toggle="list" href="#cindy-folder" role="tab">
+              <img class="team-member-avatar rounded-circle image-circle w-50 mb-3" src="/images/cindy.jpg">
+              <p>Cindy</p>
             </a>
 
-            <a class="nav-link team-member" id="v-pills-liz-tab" data-toggle="pill" href="#v-pills-liz" role="tab" aria-controls="v-pills-liz" aria-selected="false">
-              <div class="d-flex justify-content-center">
-                <img class="rounded-circle image-circle w-50" src="./img/liz.jpg">
-              </div>
-              <div class="text-center">
-                <span class="team-member-name">Liz</span>
-              </div>
+            <!-- Liz -->
+            <a class="team-member-item text-center mb-4"
+              data-toggle="list" href="#liz-folder" role="tab">
+              <img class="team-member-avatar rounded-circle image-circle w-50 mb-3" src="/images/liz.jpg">
+              <p>Liz</p>
+            </a>
+
+            <!-- Debby -->
+            <a class="team-member-item text-center mb-4"
+              data-toggle="list" href="#debby-folder" role="tab">
+              <img class="team-member-avatar rounded-circle image-circle w-50 mb-3" src="/images/debby.jpg">
+              <p>Debby</p>
+            </a>
+
+            <!-- lesley -->
+            <a class="team-member-item text-center mb-4"
+              data-toggle="list" href="#lesley-folder" role="tab">
+              <img class="team-member-avatar rounded-circle image-circle w-50 mb-3" src="/images/lesley.jpg">
+              <p>Lesley</p>
             </a>
 
           </div>
         </div>
-        <!-- rightside - project folder  -->
-        <div class="col-sm-9">
+
+        <!-- project folder - content -->
+        <div class="project-folder-content col-9">
           <div class="row">
 
+            <!-- intro -->
             <div class="col-6 d-flex align-items-center"><span class="h3">[</span>
               <p class="mb-2">
                 <span class="text-white pl-3 mb-1">OUR MISSION ：</span>
-                <span class="pr-3">教你如何 30 天內放棄 JS</span>
+                <span class="pr-3 text-primary">教你如何 30 天內放棄 JS</span>
               </p>
               <span class="h3">]</span>
             </div>
+
             <div class="col-6 d-flex align-items-center">
               <p class="text-warning mb-2">
                 <span class="custom-alerts p-2">! WARNING : JavaScript is dangerous !!</span>
@@ -101,212 +108,963 @@
             </div>
           </div>
 
-          <div class="tab-content main" id="v-pills-tabContent">
+          <div class="project-folders tab-content" id="nav-tabContent">
 
             <!-- Etrex -->
-            <div class="tab-pane fade show active" id="v-pills-etrex" role="tabpanel" aria-labelledby="v-pills-etrex-tab">
-
+            <div class="project-folder-item tab-pane fade show active"  id="etrex-folder"  role="tabpanel" aria-labelledby="member-etrex">
               <!-- name and intros -->
               <div class="row">
                 <div class="col-6">
-                  <p class="main-tag-bg">
-                    <span class="px-3 py-1 main-name-tag">File from : Etrex</span>
+                  <p class="project-folder-name px-3 py-2">File from : Etrex
                   </p>
                 </div>
                 <div class="col-6">
-                  <p class="mb-2 main-tag-right">
-                    <span class="h3">[</span>
-                    <span class="p-3 mx-2">JS 很可怕！???</span>
-                    <span class="h3">]</span>
+                  <p class="project-folder-intro text-right pr-3 pt-2">
+                    [<span class="px-2">JS 很可怕！???</span>]
                   </p>
                 </div>
               </div>
 
               <!-- add file href  -->
-              <div class="row">
-                <div class="col-4">
+              <div class="row p-3 project-list">
+                <div class="col-4" data-project-item="01-10" >
                   <ul>
-                    <li class="mt-3">
-                      <a href="#">Day#01｜<span class="text-white font-weight-bold"> - </span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Etrex/Day2 - clock/index.html">Day#02｜<span class="text-white font-weight-bold">JS and CSS Clock</span>
-                      </a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Etrex/Day3 - CSS variable/index.html">Day#03｜<span class="text-white font-weight-bold">怕爆</span>
-                      </a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="">Day#04｜<span class="text-white font-weight-bold"> - </span>
-                      </a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Etrex/Day5 - menu/index.html">Day#05｜<span class="text-white font-weight-bold">Flex Menu</span>
-                      </a>
-                    </li>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#01｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Etrex/Day2 - clock/index.html">
+                      <li>Day#02｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Etrex/Day3 - CSS variable/index.html">
+                      <li>Day#03｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#04｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Etrex/Day5 - menu/index.html">
+                      <li>Day#05｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#06｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#07｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#08｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#09｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#10｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
                   </ul>
                 </div>
-                <div class="col-4">
+
+                <div class="col-4" data-project-item="11-20" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#11｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#12｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#13｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#14｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#15｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#16｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#17｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#18｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#19｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#20｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
                 </div>
-                <div class="col-4">
+
+                <div class="col-4" data-project-item="21-30" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#21｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#.html">
+                      <li>Day#22｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#23｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#24｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#25｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#26｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#27｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#28｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#29｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#30｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 小西瓜 -->
+            <div class="project-folder-item tab-pane fade"  id="leo-folder"  role="tabpanel" aria-labelledby="member-leo">
+              <!-- name and intros -->
+              <div class="row">
+                <div class="col-6">
+                  <p class="project-folder-name px-3 py-2">File from : 小西瓜
+                  </p>
+                </div>
+                <div class="col-6">
+                  <p class="project-folder-intro text-right pr-3 pt-2">
+                    [<span class="px-2">JS 很可怕！???</span>]
+                  </p>
+                </div>
+              </div>
+
+              <!-- add file href  -->
+              <div class="row p-3 project-list">
+                <div class="col-4" data-project-item="01-10" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#01｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/pastleo/day-2-clock/index.html">
+                      <li>Day#02｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#03｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#04｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#05｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#06｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#07｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#08｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#09｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#10｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+
+                <div class="col-4" data-project-item="11-20" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#11｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#12｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#13｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#14｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#15｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#16｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#17｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#18｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#19｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#20｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+
+                <div class="col-4" data-project-item="21-30" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#21｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#22｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#23｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#24｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#25｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#26｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#27｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#28｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#29｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#30｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
                 </div>
               </div>
             </div>
 
             <!-- Cindy -->
-            <div class="tab-pane fade" id="v-pills-cindy" role="tabpanel" aria-labelledby="v-pills-cindy-tab">
-
-            <!-- name and intros -->
+            <div class="project-folder-item tab-pane fade"  id="cindy-folder"  role="tabpanel" aria-labelledby="member-cindy">
+              <!-- name and intros -->
               <div class="row">
                 <div class="col-6">
-                  <p class="main-tag-bg">
-                    <span class="px-3 py-1 main-name-tag">File from : Cindy</span>
+                  <p class="project-folder-name px-3 py-2">File from : Cindy
                   </p>
                 </div>
                 <div class="col-6">
-                  <p class="mb-2 main-tag-right">
-                    <span class="h3">[</span>
-                    <span class="p-3 mx-2">JS 很可怕！???</span>
-                    <span class="h3">]</span>
-                  </p>
-                </div>
-              </div>
-
-              <!-- add file href -->
-              <div class="row">
-                <div class="col-4">
-                  <ul>
-                    <li class="mt-3">
-                      <a href="#">Day#01｜<span class="text-white font-weight-bold">JavaScript Drum Kit</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Cindy/Day2 - clock/index.html">Day#02｜<span class="text-white font-weight-bold">JS and CSS Clock</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Cindy/Day3 - CSS variable/index.html">Day#03｜<span class="text-white font-weight-bold">CSS Variables</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Cindy/Day4 - Array Cardio/index.html">Day#04｜<span class="text-white font-weight-bold">Array Cardio</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Cindy/Day5 - Flex Chick/index.html">Day#05｜<span class="text-white font-weight-bold">Flex Chick</span></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-4">
-                </div>
-                <div class="col-4">
-                </div>
-              </div>
-            </div>
-
-            <!-- Debby -->
-            <div class="tab-pane fade" id="v-pills-debby" role="tabpanel" aria-labelledby="v-pills-debby-tab">
-
-            <!-- name and intros -->
-              <div class="row">
-                <div class="col-6">
-                  <p class="main-tag-bg">
-                    <span class="px-3 py-1 main-name-tag">File from : Debby</span>
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p class="mb-2 main-tag-right">
-                    <span class="h3">[</span>
-                    <span class="p-3 mx-2">JS 很可怕！???</span>
-                    <span class="h3">]</span>
+                  <p class="project-folder-intro text-right pr-3 pt-2">
+                    [<span class="px-2">JS 很可怕！???</span>]
                   </p>
                 </div>
               </div>
 
               <!-- add file href  -->
-              <div class="row">
-                <div class="col-4">
+              <div class="row p-3 project-list">
+                <div class="col-4" data-project-item="01-10" >
                   <ul>
-                    <li class="mt-3">
-                      <a href="#">Day#01｜<span class="text-white font-weight-bold">JavaScript Drum Kit</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Debby/Day-2-clock/index.html">Day#02｜<span class="text-white font-weight-bold">JS and CSS Clock</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Debby/Day-3-CSS_Variables/index.html">Day#03｜<span class="text-white font-weight-bold">CSS Variables</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Debby/Day-4-Array_Day_1/index.html">Day#04｜<span class="text-white font-weight-bold">Array Cardio Day 1</span></a>
-                    </li>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#01｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Cindy/Day2 - clock/index.html">
+                      <li>Day#02｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Cindy/Day3 - CSS variable/index.html">
+                      <li>Day#03｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Cindy/Day4 - Array Cardio/index.html">
+                      <li>Day#04｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Cindy/Day5 - Flex Chick/index.html">
+                      <li>Day#05｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#06｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#07｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#08｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#09｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#10｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
                   </ul>
                 </div>
-                <div class="col-4">
+
+                <div class="col-4" data-project-item="11-20" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#11｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#12｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#13｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#14｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#15｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#16｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#17｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#18｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#19｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#20｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
                 </div>
-                <div class="col-4">
+
+                <div class="col-4" data-project-item="21-30" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#21｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#22｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#23｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#24｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#25｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#26｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#27｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#28｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#29｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#30｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
                 </div>
               </div>
             </div>
 
             <!-- Liz -->
-            <div class="tab-pane fade" id="v-pills-liz" role="tabpanel" aria-labelledby="v-pills-liz-tab">
-
-            <!-- name and intros -->
-              <div class="row pb-3">
+            <div class="project-folder-item tab-pane fade"  id="liz-folder"  role="tabpanel" aria-labelledby="member-liz">
+              <!-- name and intros -->
+              <div class="row">
                 <div class="col-6">
-                  <p class="main-tag-bg">
-                    <span class="px-3 py-1 main-name-tag">File from : Liz</span>
+                  <p class="project-folder-name px-3 py-2">File from : Liz
                   </p>
                 </div>
                 <div class="col-6">
-                  <p class="mb-2 main-tag-right">
-                    <span class="h3">[</span>
-                    <span class="p-3 mx-2">人森好難，JS 更難Q_Q</span>
-                    <span class="h3">]</span>
+                  <p class="project-folder-intro text-right pr-3 pt-2">
+                    [<span class="px-2">JS 很可怕！???</span>]
                   </p>
                 </div>
               </div>
 
               <!-- add file href  -->
-              <div class="row">
-                <div class="col-4">
+              <div class="row p-3 project-list">
+                <div class="col-4" data-project-item="01-10" >
                   <ul>
-                    <li class="mt-3">
-                      <a class="disabled" href="#">Day#01｜<span class="text-white font-weight-bold">JavaScript Drum Kit</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Liz/Day2 - clock/index.html">Day#02｜<span class="text-white font-weight-bold">JS and CSS Clock</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Liz/Day3 - CSS Variables/index.html">Day#03｜<span class="text-white font-weight-bold">CSS Variables</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Liz/Day4 - Array Cardio Day 1/index.html">Day#04｜<span class="text-white font-weight-bold">Array Cardio Day 1</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Liz/Day5 - Flex Panel Gallery/index.html">Day#05｜<span class="text-white font-weight-bold">Flex Panel Gallery</span></a>
-                    </li>
-                    <li class="mt-3">
-                      <a href="./js30/Liz/Day6 - type ahead/index.html">Day#06｜<span class="text-white font-weight-bold">Type Ahead</span></a>
-                    </li>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#01｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Liz/Day2 - clock/index.html">
+                      <li>Day#02｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Liz/Day3 - CSS Variables/index.html">
+                      <li>Day#03｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Liz/Day4 - Array Cardio Day 1/index.html">
+                      <li>Day#04｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Liz/Day5 - Flex Panel Gallery/index.html">
+                      <li>Day#05｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Liz/Day6 - type ahead/index.html">
+                      <li>Day#06｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#07｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#08｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#09｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#10｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
                   </ul>
                 </div>
-                <div class="col-4">
+
+                <div class="col-4" data-project-item="11-20" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#11｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#12｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#13｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#14｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#15｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#16｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#17｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#18｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#19｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#20｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
                 </div>
-                <div class="col-4">
+
+                <div class="col-4" data-project-item="21-30" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#21｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#22｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#23｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#24｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#25｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#26｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#27｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#28｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#29｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#30｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Debby -->
+            <div class="project-folder-item tab-pane fade"  id="debby-folder"  role="tabpanel" aria-labelledby="member-debby">
+              <!-- name and intros -->
+              <div class="row">
+                <div class="col-6">
+                  <p class="project-folder-name px-3 py-2">File from : Debby
+                  </p>
+                </div>
+                <div class="col-6">
+                  <p class="project-folder-intro text-right pr-3 pt-2">
+                    [<span class="px-2">JS 很可怕！???</span>]
+                  </p>
+                </div>
+              </div>
+
+              <!-- add file href  -->
+              <div class="row p-3 project-list">
+                <div class="col-4" data-project-item="01-10" >
+                  <ul>
+                    <a class="project-item" href="team/Debby/Day-1-Dum_Kit/index.html">
+                      <li>
+                        Day#01｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Debby/Day-2-clock/index.html">
+                      <li>Day#02｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Debby/Day-3-CSS_Variables/index.html">
+                      <li>Day#03｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="team/Debby/Day-3-CSS_Variables/index.html">
+                      <li>Day#04｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#05｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#06｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#07｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#08｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#09｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#10｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+
+                <div class="col-4" data-project-item="11-20" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#11｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#12｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#13｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#14｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#15｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#16｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#17｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#18｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#19｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#20｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+
+                <div class="col-4" data-project-item="21-30" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#21｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#22｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#23｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#24｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#25｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#26｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#27｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#28｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#29｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#30｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lesley -->
+            <div class="project-folder-item tab-pane fade"  id="lesley-folder"  role="tabpanel" aria-labelledby="member-lesley">
+              <!-- name and intros -->
+              <div class="row">
+                <div class="col-6">
+                  <p class="project-folder-name px-3 py-2">File from : Lesley
+                  </p>
+                </div>
+                <div class="col-6">
+                  <p class="project-folder-intro text-right pr-3 pt-2">
+                    [<span class="px-2">JS 很可怕！???</span>]
+                  </p>
+                </div>
+              </div>
+
+              <!-- add file href  -->
+              <div class="row p-3 project-list">
+                <div class="col-4" data-project-item="01-10" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#01｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#02｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#03｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#04｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#05｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#06｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#07｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#08｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#09｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#10｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+
+                <div class="col-4" data-project-item="11-20" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#11｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#12｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#13｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#14｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#15｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#16｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#17｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#18｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#19｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#20｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+
+                <div class="col-4" data-project-item="21-30" >
+                  <ul>
+                    <a class="project-item" href="#">
+                      <li>
+                        Day#21｜<span>JavaScript Drum Kit</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#22｜<span>JS and CSS Clock</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#23｜<span>CSS Variables</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#24｜<span>Array Cardio Day 1</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#25｜<span>Flex Panel Gallery</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#26｜<span>Type Ahead</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#27｜<span>Array Cardio Day 2</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#28｜<span>Fun with HTML5 Canvas</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#29｜<span>Dev Tools Domination</span>
+                      </li>
+                    </a>
+                    <a class="project-item" href="#">
+                      <li>Day#30｜<span>Hold Shift and Check Checkboxes</span>
+                      </li>
+                    </a>
+                  </ul>
                 </div>
               </div>
             </div>
 
           </div>
         </div>
+
       </div>
     </div>
 
     <!-- RWD -->
-    <div class="container d-sm-block d-md-none">
-      <div class="row d-flex justify-content-center">
-        <div class="col-4">
-          <div class="custom-alerts">
-            <p class="text-center mb-0">🚨</p>
-            <p class="text-warning text-center">! WARNING !</p>
+    <div class="container d-block d-md-none rwd-close-mobile">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center mb-5">
+          <div class="custom-alerts p-3 pt-4">
+            <h4 class="text-center mb-2">🚨</h4>
+            <h3 class="text-warning text-center">! WARNING !</h3>
           </div>
         </div>
         <div class="col-12">
@@ -330,5 +1088,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+      $('.team-member-item a').on('click', function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
+    <script type="text/javascript" src="javascripts/site.js"></script>
+
   </body>
 </html>

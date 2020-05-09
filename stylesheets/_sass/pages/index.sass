@@ -1,0 +1,145 @@
+/*  index   */
+
+// index alerts
+.rwd-close-mobile
+  margin-top: 130px
+  .custom-alerts
+    background-color: rgba(255, 184, 47, .1)
+    border-radius: 4px
+    display: inline-block
+    margin: auto 0
+
+// index main
+.page-home
+  .project-folders
+    background-color: #191F33
+    border: 1px solid rgba(43, 238, 238, .2)
+    box-shadow:  10px 10px 0px 0px rgba(43,238,238,1)
+    border-radius: 0px
+    position: relative
+
+    .project-folder-name
+      border-left: 5.8px solid $primary
+      background-color: rgba(43, 238, 238, .2)
+      display: inline-block
+
+    .project-list
+      .col-4+.col-4
+        border-left: 1px solid rgba(43, 238, 238, .2)
+      .project-item
+        margin-bottom: 1.2rem
+        cursor: default
+        li
+          color: $primary
+          padding: .5rem .7rem
+          border-radius: 4px
+          opacity: .4
+          transition: .2s all
+          span
+            color: white
+
+      a.project-item[href*="html"]
+        cursor: pointer
+        li
+          opacity: 1
+          &:hover
+            background-color: rgba(43, 238, 238, 0.1)
+            font-style: italic
+            span
+              color: $primary
+
+
+  // index left part - team
+
+  .sidebar-team
+    position: relative
+
+    .team-tag
+      position: absolute
+      top: 10%
+      left: -38px
+      transform: rotate(-90deg)
+      background-color: rgba(43, 238, 238, .2)
+      z-index: -1
+      padding: 8px 20px 35px 15px
+      border-radius: 5px
+
+    &:after
+      content: ""
+      background: linear-gradient(180deg, #13192e 0%, rgba(22, 27, 45, 0.7) 70%,rgba(22, 27, 45, 0) 100%)
+      position: absolute
+      top: 0
+      left: 15px
+      height: 130px
+      width: calc(100% - 30px)
+      z-index: 1
+
+    &:before
+      content: ""
+      background: linear-gradient(0deg, #13192e 0%, rgba(22, 27, 45, 0) 100%)
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 80px
+      width: 100%
+      z-index: 2
+
+    .team-member-list
+      position: relative
+      height: calc(100vh - 56px)
+      overflow: scroll
+      background: linear-gradient(180deg, #161b2d 0%, #191f33 30%, #191f33 87%, #161b2d 100%)
+      // background-color: #191F33
+      z-index: 1
+      border-left: 1px solid rgba(43, 238, 238, .2)
+      border-right: 1px solid rgba(43, 238, 238, .2)
+      box-shadow: 0px 0px 30px #0C1431
+
+      .team-member-item
+        display: block
+        align-items: center
+        transition: .2s all
+        opacity: .7
+
+        &:hover
+          opacity: 1
+          p
+            transform: translatey(0px)
+            &:before
+              transition: .2s all
+              bottom: -5px
+              opacity: 1
+          .team-member-avatar
+            transform: scale(1)
+            box-shadow: 0 0 0 4px #ffc107a1, 0 0 0 15px #ffc10738
+
+        .team-member-avatar
+          margin: 0 auto
+          display: block
+          transition: .2s all
+          transform: scale(.9)
+        p
+          display: inline-block
+          position: relative
+          transform: translatey(-3px)
+          transition: .2s all
+          &:before
+            content: ""
+            background-color: $yellow
+            width: 100%
+            height: 2px
+            position: absolute
+            bottom: 0px
+            opacity: 0
+
+      .active.team-member-item
+        opacity: 1
+        p
+          color: $yellow
+          transform: translatey(0px)
+          &:before
+            bottom: -5px
+            opacity: 1
+        .team-member-avatar
+            box-shadow: 0 0 0 4px #ffc107a1, 0 0 0 15px #ffc10738
+

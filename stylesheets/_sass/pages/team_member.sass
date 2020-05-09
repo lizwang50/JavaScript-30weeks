@@ -1,0 +1,55 @@
+/*  Team member   */
+.team-title
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    background-color: white
+    height: 2px
+    width: 50px
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+.team-subtitle
+  h5
+    display: inline-block
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      background-color: white
+      height: 2px
+      width: 100%
+      left: 0
+      bottom: 0
+
+
+// team member cards
+.member-card
+  border: 1px solid rgba(43, 238, 238, .2)
+  background-color: #191F33
+  border-radius: 0px
+  position: relative
+  min-height: 100%
+  transition: .2s all
+
+  &:hover
+    box-shadow: 5px 5px 0px 0px #2beeee
+    transform: translate(-5px,-5px)
+
+  .card-tag
+    display: inline-block
+    position: absolute
+    right: 0
+    top: 0
+
+  .member-card-social
+    a
+      margin-right: 1.2rem
+      &:hover
+        color: $primary
+
+  .card-tag,.card-content p
+    background-color: rgba(43, 238, 238, .2)
+
