@@ -12,12 +12,13 @@
     <title>黑人問號 JS 社</title>
   </head>
 
-  <body>
+  <body class="page-member">
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar-brand font-weight-bold" href="./">黑人問號 JS 社</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand font-weight-bold text-primary" href="./">黑人問號 JS 社</a>
+        <button class="navbar-toggler text-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
@@ -28,295 +29,356 @@
               <a class="nav-link text-white font-italic" href="https://javascript30.com/" target="_blank">#JavaScript 30</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="https://github.com/lizwang50/JavaScript-30weeks" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+              <a class="nav-link text-white" href="https://github.com/lizwang50/JavaScript-30weeks" target="_blank"><i class="fab fa-github fa-lg"></i>
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <div class="container">
-      <h1 class="text-center font-italic">MISSION Team</h1>
-      <div class="d-flex justify-content-center team-title">
-        <div class="underline mb-3 bg-white"></div>
-      </div>
+    <div class="container mb-5 mt-4">
+      <h1 class="team-title text-center font-italic pb-3 mb-5">MISSION Team</h1>
 
       <div class="row">
-        <div class="col team-subtitle">
-          <h5>
-            <span>擺渡人</span>
-            <span class="ml-4 text-white">普渡 JS 苦手眾生</span>
-          </h5>
-          <div class="underline-1 mb-3 bg-white"></div>
+        <div class="col-12 team-subtitle mb-3">
+          <h5 class="pb-2">擺渡人</h5>
+          <span class="ml-4 text-white">普渡 JS 苦手眾生</span>
         </div>
       </div>
 
       <!-- MENTOR -->
       <div class="row mb-4">
-        <div class="card-deck">
 
-          <!-- 卡米 -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">MENTOR</div>
-            </div>
-            <div class="row">
+        <!-- 卡米 -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">MENTOR</small>
+            <div class="row mt-4 mb-2">
               <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="./img/kami.jpg" alt="Card image cap">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="images/kami.jpg" alt="Kakami chu">
               </div>
               <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">卡米</h5>
-                  <h5 class="font-italic mb-3">Kakami chu</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a>
-                  <a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
+                <div class="card-intro ml-3">
+                  <h5>卡米</h5>
+                  <h6 class="font-italic">Kakami chu</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <p class="card-intro card-text text-white m-3 p-3">志在普度眾人，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄的卡米狗之父，人稱廚神小當家卡米的卡米。</p>
-          </div>
-
-          <!-- 小西瓜 -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">MENTOR</div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="./img/leo.jpg"" alt="Card image cap">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">小西瓜</h5>
-                  <h5 class="font-italic mb-3">Shiow shi gua</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a>
-                  <a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
-                </div>
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">志在普度眾人，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄的卡米狗之父，人稱廚神小當家卡米的卡米。</p>
               </div>
             </div>
-            <p class="card-intro card-text text-white m-3 p-3">外表看似型男的扛壩子工程師。</p>
-          </div>
-
-          <!-- 笑笑羊 -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">MENTOR</div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="http://unsplash.it/50/50?gravity=center" alt="Card image cap">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">笑笑羊</h5>
-                  <h5 class="font-italic mb-3">JavaScript Master</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a>
-                  <a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a><a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <p class="card-intro card-text text-white m-3 p-3">沒有人寫的話，就是我幫你寫。</p>
           </div>
         </div>
+
+        <!-- 小西瓜 -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">MENTOR</small>
+
+            <div class="row mt-4 mb-2">
+              <div class="col-4">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="images/leo.jpg" alt="Shiow shi gua">
+              </div>
+              <div class="col-8">
+                <div class="card-intro ml-3">
+                  <h5>小西瓜</h5>
+                  <h6 class="font-italic">Shiow shi gua</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">外表看似型男的扛壩子工程師。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mindy -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">MENTOR</small>
+
+            <div class="row mt-4 mb-2">
+              <div class="col-4">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="http://unsplash.it/50/50?gravity=center" alt="Shiow shi gua">
+              </div>
+              <div class="col-8">
+                <div class="card-intro ml-3">
+                  <h5>Mindy</h5>
+                  <h6 class="font-italic">Mindy</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">簡介</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
       <!-- STUDENT -->
       <div class="row mt-5">
-        <div class="col team-subtitle">
-          <h5><span>被擺渡的人</span>
-            <span class="ml-4 text-white">深陷在 JS 苦海的人們</span>
-          </h5>
-          <div class="underline-2 mb-3 bg-white"></div>
+        <div class="col-12 team-subtitle mb-3">
+          <h5 class="pb-2">被擺渡的人</h5>
+          <span class="ml-4 text-white">深陷在 JS 苦海的人們</span>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="card-deck">
+        <!-- Debby -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">STUDENT</small>
 
-          <!-- Debby -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">STUDENT</div>
-            </div>
-            <div class="row">
+            <div class="row mt-4 mb-2">
               <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="./img//debby.jpg" alt="Card image cap">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="images/debby.jpg" alt="Debby">
               </div>
               <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">Debby</h5>
-                  <h5 class="font-italic mb-3">UI Designer</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a>
-                  <a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a><a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
+                <div class="card-intro ml-3">
+                  <h5>Debby</h5>
+                  <h6 class="font-italic">UI Designer</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="card-intro card-text text-white m-3 p-3">美豔絕倫、豔冠四方，長得像標楷體的人都不可以入她的眼裡，人稱傳說中「 0.5 px 都不要想呼嚨我！」的設計師。黛比！</p>
-          </div>
 
-          <!-- Liz -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">STUDENT</div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="./img//liz.jpg" alt="Card image cap">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">Liz</h5>
-                  <h5 class="font-italic mb-3">Project Manager</h5>
-                  <a class="mx-3" href="https://www.facebook.com/liz.wang.5" target="_blank"> <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a>
-                  <a href="https://github.com/lizwang50" target="_blank">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
-                </div>
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">美豔絕倫、豔冠四方，長得像標楷體的人都不可以入她的眼裡，人稱傳說中「 0.5 px 都不要想呼嚨我！」的設計師。黛比！</p>
               </div>
             </div>
-            <p class="card-intro card-text text-white m-3 p-3">黑人問號社始祖之一。想放棄 JS 嗎？被 git 雷過嗎？相對路徑是什麼？歡迎有以上疑問的黑人問號潛力者入社！</p>
-          </div>
-
-          <!-- Cindy -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">STUDENT</div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="./img/cindy.jpg" alt="Card image cap">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">Cindy</h5>
-                  <h5 class="font-italic mb-3">Rails Master</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a>
-                  <a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <p class="card-intro card-text text-white m-3 p-3">早餐可以吃一週、假動作「白飯攤平之術」的創作始祖，Cindy Liu！</p>
           </div>
         </div>
 
-        <div class="card-deck my-5">
+        <!-- Liz -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">STUDENT</small>
 
-          <!-- 兆兆 -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">STUDENT</div>
-            </div>
-            <div class="row">
+            <div class="row mt-4 mb-2">
               <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="./img/lesley.jpg" alt="Card image cap">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="images/liz.jpg" alt="Liz">
               </div>
               <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">兆兆</h5>
-                  <h5 class="font-italic mb-3">Gaming Streamer</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a>
-                  <a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a><a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
+                <div class="card-intro ml-3">
+                  <h5>Liz</h5>
+                  <h6 class="font-italic">Project Manager</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="https://www.facebook.com/liz.wang.5" target="_blank">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="https://github.com/lizwang50" target="_blank">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="card-intro card-text text-white m-3 p-3">「板橋美麗魅惑咖啡師」你看過嗎？沒看過？現在讓你看看！五倍最罩的兆兆</p>
-          </div>
 
-          <!-- 佳蕙 -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">STUDENT</div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="http://unsplash.it/50/50?gravity=center" alt="Card image cap">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">佳蕙</h5>
-                  <h5 class="font-italic mb-3">Backend Engineer</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a><a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
-                </div>
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">黑人問號社始祖之一。想放棄 JS 嗎？被 git 雷過嗎？相對路徑是什麼？歡迎有以上疑問的黑人問號潛力者入社！</p>
               </div>
             </div>
-            <p class="card-intro card-text text-white m-3 p-3">觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。</p>
-          </div>
-
-          <!-- 政璇 -->
-          <div class="card custom-cards">
-            <div class="d-flex justify-content-end">
-              <div class="card-tag px-2 py-1">STUDENT</div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <img class="image-circle ml-3 rounded-circle" src="http://unsplash.it/50/50?gravity=center" alt="Card image cap">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title">政璇</h5>
-                  <h5 class="font-italic mb-3">JavaScript Master</h5>
-                  <a href="#">
-                    <i class="text-white fa-lg fas fa-globe"></i>
-                  </a><a class="mx-3" href="#">
-                    <i class="text-white fa-lg fab fa-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i class="text-white fa-lg fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <p class="card-intro card-text text-white m-3 p-3">Don't rush him Ｔ恤的擁有者。公園單槓伯。</p>
           </div>
         </div>
+
+        <!-- Cindy -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">STUDENT</small>
+
+            <div class="row mt-4 mb-2">
+              <div class="col-4">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="images/cindy.jpg" alt="Cindy">
+              </div>
+              <div class="col-8">
+                <div class="card-intro ml-3">
+                  <h5>Cindy</h5>
+                  <h6 class="font-italic">Rails Master</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">早餐可以吃一週、假動作「白飯攤平之術」的創作始祖，Cindy Liu！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 兆兆 -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">STUDENT</small>
+
+            <div class="row mt-4 mb-2">
+              <div class="col-4">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="images/lesley.jpg" alt="Lesley">
+              </div>
+              <div class="col-8">
+                <div class="card-intro ml-3">
+                  <h5>兆兆</h5>
+                  <h6 class="font-italic">Gaming Streamer</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">「板橋美麗魅惑咖啡師」你看過嗎？沒看過？現在讓你看看！五倍最罩的兆兆</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 佳蕙 -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">STUDENT</small>
+
+            <div class="row mt-4 mb-2">
+              <div class="col-4">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="http://unsplash.it/50/50?gravity=center" alt="Lesley">
+              </div>
+              <div class="col-8">
+                <div class="card-intro ml-3">
+                  <h5>佳蕙</h5>
+                  <h6 class="font-italic">Gaming Streamer</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 政璇 -->
+        <div class="col-12 col-md-4 mb-4 mb-md-5">
+          <div class="card member-card p-3">
+            <small class="card-tag px-2 py-1">STUDENT</small>
+
+            <div class="row mt-4 mb-2">
+              <div class="col-4">
+                <img class="team-member-avatar image-circle ml-3 rounded-circle" src="http://unsplash.it/50/50?gravity=center" alt="Lesley">
+              </div>
+              <div class="col-8">
+                <div class="card-intro ml-3">
+                  <h5>政璇</h5>
+                  <h6 class="font-italic">JavaScript Master</h6>
+                  <div class="member-card-social mt-3">
+                    <a href="#">
+                      <i class="fa-lg fas fa-globe"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-lg fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 card-content">
+                <p class="text-white p-3 m-0">Don't rush him Ｔ恤的擁有者。公園單槓伯。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
