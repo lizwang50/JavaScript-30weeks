@@ -4,13 +4,12 @@
 .rwd-close-mobile
   margin-top: 130px
   .custom-alerts
-    background-color: rgba(255, 184, 47, .1)
-    border-radius: 4px
     display: inline-block
     margin: auto 0
 
 // index main
 .page-home
+  position: relative
   .project-folders
     background-color: #191F33
     border: 1px solid rgba(43, 238, 238, .2)
@@ -70,7 +69,7 @@
       position: absolute
       top: 0
       left: 15px
-      height: 130px
+      height: 110px
       width: calc(100% - 30px)
       z-index: 1
 
@@ -94,6 +93,7 @@
       border-left: 1px solid rgba(43, 238, 238, .2)
       border-right: 1px solid rgba(43, 238, 238, .2)
       box-shadow: 0px 0px 30px #0C1431
+      padding: 70px 0px 50px 0px
 
       .team-member-item
         display: block
@@ -135,11 +135,11 @@
       .active.team-member-item
         opacity: 1
         p
-          color: $yellow
+          color: $primary
           transform: translatey(0px)
           &:before
             bottom: -5px
             opacity: 1
         .team-member-avatar
+            transform: scale(1)
             box-shadow: 0 0 0 4px #ffc107a1, 0 0 0 15px #ffc10738
-

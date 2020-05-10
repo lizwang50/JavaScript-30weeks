@@ -11,6 +11,12 @@
   background-color: #2BEEEE;
 }
 
+.custom-alerts {
+  background-color: rgba(255, 184, 47, 0.1);
+  color: #FFB82F;
+  border-radius: 4px;
+}
+
 body {
   font-family: "Exo 2", "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #161B2D;
@@ -83,12 +89,13 @@ a:hover {
   margin-top: 130px;
 }
 .rwd-close-mobile .custom-alerts {
-  background-color: rgba(255, 184, 47, 0.1);
-  border-radius: 4px;
   display: inline-block;
   margin: auto 0;
 }
 
+.page-home {
+  position: relative;
+}
 .page-home .project-folders {
   background-color: #191F33;
   border: 1px solid rgba(43, 238, 238, 0.2);
@@ -150,7 +157,7 @@ a:hover {
   position: absolute;
   top: 0;
   left: 15px;
-  height: 130px;
+  height: 110px;
   width: calc(100% - 30px);
   z-index: 1;
 }
@@ -173,6 +180,7 @@ a:hover {
   border-left: 1px solid rgba(43, 238, 238, 0.2);
   border-right: 1px solid rgba(43, 238, 238, 0.2);
   box-shadow: 0px 0px 30px #0C1431;
+  padding: 70px 0px 50px 0px;
 }
 .page-home .sidebar-team .team-member-list .team-member-item {
   display: block;
@@ -220,7 +228,7 @@ a:hover {
   opacity: 1;
 }
 .page-home .sidebar-team .team-member-list .active.team-member-item p {
-  color: #FFB82F;
+  color: #2BEEEE;
   transform: translatey(0px);
 }
 .page-home .sidebar-team .team-member-list .active.team-member-item p:before {
@@ -228,6 +236,7 @@ a:hover {
   opacity: 1;
 }
 .page-home .sidebar-team .team-member-list .active.team-member-item .team-member-avatar {
+  transform: scale(1);
   box-shadow: 0 0 0 4px #ffc107a1, 0 0 0 15px #ffc10738;
 }
 
