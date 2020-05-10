@@ -173,6 +173,7 @@ a:hover {
 }
 .page-home .sidebar-team .team-member-list {
   position: relative;
+  min-height: 800px;
   height: calc(100vh - 56px);
   overflow: scroll;
   background: linear-gradient(180deg, #161b2d 0%, #191f33 30%, #191f33 87%, #161b2d 100%);
