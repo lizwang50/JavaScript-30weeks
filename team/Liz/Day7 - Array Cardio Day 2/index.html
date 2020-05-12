@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Cardio Day 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    body {
+        box-sizing: border-box;
+        background: #333333;
+        font-family: 'Baloo Da 2', cursive ,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-white">Day - 7 - Array Cardio Day 2</h1>
+    <p class="text-white"><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+    <section>
+      <div class="text-white">
+        <h4>Array.prototype.some()</h4>
+        <small class="text-secondary">is at least one person 19 or older?</small>
+        <p class="isAdult"></p>
+      </div>
+      <div class="text-white">
+        <h4>Array.prototype.every()</h4>
+        <small class="text-secondary">is everyone 19 or older?</small>
+        <p class="allAdult"></p>
+      </div>
+      <div class="text-white">
+        <h4>Array.prototype.find()</h4>
+        <p class="text-secondary">Find is like filter, but instead returns just the one you are looking for</p>
+        <small class="text-secondary">find the comment with the ID of 823423</small>
+        <p class="text-white">Text : <span class="commentText""></span></p>
+        <p class="text-white">ID : <span class="commentId"></span></p>
+      </div>
+      <div class="text-white">
+        <h4>Array.prototype.findIndex()</h4>
+        <p class="text-secondary">Find the comment with this ID</p>
+        <small class="text-secondary">delete the comment with the ID of 823423</small>
+        <ul class="splice"></ul>
+      </div>
+
+    </section>
+  </div>
+  <script>
+    // ## Array Cardio Day 2
+    const people = [
+      { name: 'Wes', year: 1988 },
+      { name: 'Kait', year: 1986 },
+      { name: 'Irv', year: 1970 },
+      { name: 'Lux', year: 2015 }
+    ];
+
+    const comments = [
+      { text: 'Love this!', id: 523423 },
+      { text: 'Super good', id: 823423 },
+      { text: 'You are the best', id: 2039842 },
+      { text: 'Ramen is my fav food ever', id: 123523 },
+      { text: 'Nice Nice Nice!', id: 542328 }
+    ];
+
+    // Some and Every Checks
+    //some()：會去比對這個陣列裡面的條件，只要有一個符合，就會回傳 True
+    // Array.prototype.some() // is at least one person 19 or older?
+    //好懂寫法（初學者）
+    // const isAdult = people.some(function (person) {
+    //   //person 就是這個函式要用動態改變的東西
+    //   const currentYear = new Date().getFullYear();
+    //   //先拿到今年是幾年
+    //   if(currentYear - person.year > 18){
+    //   //如果今年減掉這個人的出生年小於 18 就回傳 True
+    //     return true
+    //   }
+    // }); 
+    //簡寫
+    const isAdult = people.some( person => {
+      return (new Date()).getFullYear() - person.year > 18
+    });
+    console.log({isAdult});
+    document.querySelector('.isAdult').innerHTML = isAdult;
+    
+    // Array.prototype.every() // is everyone 19 or older?
+    const allAdult = people.every( person => (new Date()).getFullYear() - person.year > 18);
+    document.querySelector('.allAdult').innerHTML = allAdult;
+    console.log({allAdult});
+
+    // Array.prototype.find()
+    // Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423
+    // const comment = comments.find(function (comment) {
+    //   if(comment.id === 823423){
+    //     return true
+    //   }      
+    // })
+    const comment = comments.find((comment)=> comment.id === 823423);
+    document.querySelector('.commentText').innerHTML = comment.text;
+    document.querySelector('.commentId').innerHTML = comment.id;
+    console.log(comment);
+    
+    // Array.prototype.findIndex()
+    // Find the comment with this ID
+    // delete the comment with the ID of 823423
+    const index = comments.findIndex((comment)=> comment.id === 823423);
+    comments.splice(index,1);
+    const splice = document.querySelector('.splice');
+    // [ 物件 ] 用 map 讓它變成 [ 我想要的字串 ]
+    splice.innerHTML = comments.map(c=> `
+      <li>${c.text}</li>
+      <li>${c.id}</li>
+      `).join("\n");
+      //之後再用 join 把字串陣列變成一個字串
+      //再弄到 innerHTML 上
+    
+    // --下面是比較不好的寫法--
+    // const spliceLen = comments.length;
+    // for (let i = 0; i < spliceLen; i++) {
+    //   splice.innerHTML = splice.innerHTML + `
+    //   <li>${comments[i].text}</li>
+    //   <li>${comments[i].id}</li>
+    // `
+    // console.log(i);}
+    // ;
+    // console.log(splice);
+    
+  </script>
+</body>
+
+</html>
