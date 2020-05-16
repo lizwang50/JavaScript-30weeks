@@ -24,17 +24,18 @@
     // line color
     let hue = 0
     function updateColor(){
-      hue ++
-      color = `hsl(${hue},100%,50%)`
+      hue = hue + 3
+      color = `hsl(${hue},100%,70%)`
+      ctx.globalAlpha = 0.3;
       ctx.fillStyle = color
     }
 
     // line size
-    let size = 1
+    let size = 20
     let sizeSpeed = 1
     function updateSize(){
-      if(size < 5) sizeSpeed = 1
-      if(size > 20) sizeSpeed = -1
+      if(size < 20) sizeSpeed = 0.25
+      if(size > 40) sizeSpeed = -0.25
       size = size + sizeSpeed
     }
 
@@ -53,7 +54,7 @@
         y: from.y
       }]
 
-      for(let i=1 ; i<=n ; i++){
+      for(let i=1 ; i<n ; i++){
         a.push({
           x: from.x + i/n * dx,
           y: from.y + i/n * dy
@@ -72,7 +73,7 @@
     // draw a line with dots
     function drawLine(from, to, size){
       const r = size
-      const dots = getDots(from, to, size/3)
+      const dots = getDots(from, to, size/2)
       dots.forEach(dot=>drawCircle(dot.x, dot.y, r))
     }
 
