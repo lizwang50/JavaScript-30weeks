@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+</head>
+<body>
+  <canvas id='canvas'></canvas>
+  <script>
+    let isDraw = false
+    let lastMousePosition = {x: 0, y: 0}
+    const canvas = document.getElementById('canvas')
+    const ctx = canvas.getContext('2d')
+
+    // resize canvas
+    function resizeCanvas(){
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+    window.addEventListener('resize', resizeCanvas)
+    resizeCanvas()
+
+    // line color
+    let hue = 0
+    function updateColor(){
+      hue = hue + 3
+      color = `hsl(${hue},100%,70%)`
+      ctx.globalAlpha = 0.3;
+      ctx.fillStyle = color
+    }
+
+    // line size
+    let size = 20
+    let sizeSpeed = 1
+    function updateSize(){
+      if(size < 20) sizeSpeed = 0.25
+      if(size > 40) sizeSpeed = -0.25
+      size = size + sizeSpeed
+    }
+
+    function getDots(from, to, gap){
+      const dx = to.x - from.x
+      const dy = to.y - from.y
+      const d = Math.sqrt(dx*dx+dy*dy)
+
+      // number of dots
+      const n = Math.floor(d/gap)
+      if(n > 100){
+        n = 100
+      }
+      const a = [{
+        x: from.x,
+        y: from.y
+      }]
+
+      for(let i=1 ; i<n ; i++){
+        a.push({
+          x: from.x + i/n * dx,
+          y: from.y + i/n * dy
+        })
+      }
+      return a
+    }
+
+    // draw a circle at x, y
+    function drawCircle(x, y, radius){
+      ctx.beginPath()
+      ctx.arc(x, y, radius, 0, 2 * Math.PI, false)
+      ctx.fill()
+    }
+
+    // draw a line with dots
+    function drawLine(from, to, size){
+      const r = size
+      const dots = getDots(from, to, size/2)
+      dots.forEach(dot=>drawCircle(dot.x, dot.y, r))
+    }
+
+    canvas.addEventListener("mousedown", (e)=>{
+      isDraw = true
+      lastMousePosition = {
+        x: e.offsetX,
+        y: e.offsetY
+      }
+    })
+
+    canvas.addEventListener("mouseup", (e)=>{
+      isDraw = false
+    })
+
+    canvas.addEventListener("mousemove", (e)=>{
+      const currentMousePosition = {
+        x: e.offsetX,
+        y: e.offsetY
+      }
+      if(isDraw){
+        updateColor()
+        updateSize()
+        drawLine(lastMousePosition, currentMousePosition, size)
+      }
+      lastMousePosition = currentMousePosition
+    })
+  </script>
+</body>
+</html>
