@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+  <label for="color">🐤顏色:</label>
+  <input id="color" type="color" name="color" value="#ffc600">
+  <label for="size">🐤大小:</label>
+  <input id="size" type="range" name="size" min="0" max="100" value="50">
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script src="./main.js"></script>
+<style>
+  html, body {
+    margin: 0;
+    cursor: url(./images/cindy.png), default;
+  }
+</style>
+
+</body>
+</html>
