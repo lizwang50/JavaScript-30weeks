@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hold Shift to Check Multiple Checkboxes</title>
+</head>
+<body>
+</body>
+<script>
+  // JavaScript 30 with 卡米哥!
+  const a = []
+  a.length = 1000;
+  a.fill('<input type="checkbox">')
+  document.querySelector('body').innerHTML = a.join('\n');
+  const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];
+
+  let lastCheckedIndex;
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', function(event) {
+    if(event.shiftKey) {
+      // clear lastCheckedIndex 上下有選到的 checkbox
+      for(let i = lastCheckedIndex - 1; i >= 0 ; i --) {
+        if (checkboxes[i].checked) {
+          checkboxes[i].checked = false
+        } else {
+          break;
+        }
+      }
+      for (let i = lastCheckedIndex; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          checkboxes[i].checked = false
+        } else {
+          break;
+        }
+      }
+      // select from lasgcCheckIndex to current checkbox
+      const currentCheckIndex = checkboxes.indexOf(event.target)
+      // const index1 = Math.min(lastCheckIndex, currentCheckIndex)
+      // const index2 = Math.max(lastCheckIndex, currentCheckIndex)
+      const [index1, index2] = [lastCheckedIndex, currentCheckIndex].sort((a, b) => a - b)
+      for (let i = index1 ; i <= index2 ; i ++) {
+        checkboxes[i].checked = true
+      }
+    } else {
+      lastCheckedIndex = checkboxes.indexOf(event.target);
+    }
+  }))
+</script>
+</html>
