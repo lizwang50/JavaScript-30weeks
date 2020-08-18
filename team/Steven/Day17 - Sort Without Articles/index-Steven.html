@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+</head>
+
+<body>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #bands {
+      list-style: inside square;
+      font-size: 20px;
+      background: white;
+      width: 500px;
+      margin: auto;
+      padding: 0;
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    #bands li {
+      border-bottom: 1px solid #efefef;
+      padding: 20px;
+    }
+
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      color: #ffc600;
+      text-decoration: none;
+    }
+  </style>
+
+  <ul id="bands"></ul>
+
+  <script>
+    /*
+    1. Exclude the article from bands' name
+      - e.g. for 'An Old Dog', sorting by 'Old Dog' instead of 'An Old Dog'
+    2. Insert html list element into the ul #bands
+      - Array.prototype.sort() receives a callback function, which is able to deal with sept 1 while sorting.
+    3. The list element inserted remains the orignial form (exactly same as before sorting)
+    */
+
+    const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled',
+      'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive',
+      'Anywhere But Here', 'An Old Dog'
+    ];
+
+    // Solution 1. Answer by wesbos
+    function stript(bandName) {
+      return bandName.replace(/^(a |the |an )/i, '').trim();
+    }
+
+    // Refactoring of Array sorting, Step 1.
+    // const sortedBands = bands.sort(function(a, b) {
+    //   if (stript(a) > stript(b)) {
+    //     return 1;
+    //   } else {
+    //     return -1;
+    //   }
+    // });
+
+    // Refactoring of Array sorting, Step 2.
+    // const sortedBands = bands.sort((a, b) => {
+    //   return stript(a) > stript(b) ? 1 : -1;
+    // });
+
+    // Refactoring of Array sorting, Step 3.
+    const sortedBands = bands.sort((a, b) => stript(a) > stript(b) ? 1 : -1);
+    // ***********************************************************************
+
+    // Solution 2. self-memorizing function
+    let count = 0;
+    const excludeList = ['The', 'An', 'A'];
+
+    function striptName(a) {
+      if (!striptName.cache) {
+        striptName.cache = {};
+      };
+
+      if (striptName.cache[a] !== undefined) {
+        return striptName.cache[a];
+      };
+
+      count++;
+
+      const nameArr = a.split(' ');
+
+      if (excludeList.includes(nameArr[0])) {
+        nameArr.shift();
+        return striptName.cache[a] = nameArr.join(' ');
+      } else {
+        return striptName.cache[a] = a;
+      }
+    }
+
+    const sortedBands2 = bands.sort((a, b) => striptName(a) > striptName(b) ? 1 : -1);
+    // ***********************************************************************
+
+    // Solution 3. by Etrex
+    // Etrex.get('奇怪的知識');
+    // turn elements in the bands array into objects,
+    // which included original name and forSort name (article stripped)
+    const sortedBands3 = bands.map(b => {
+        return {
+          original: b,
+          forSort: b.replace(/The /g, '').replace(/An /g, '').replace(/A /g, '')
+          // forSort: striptName(b)
+        }
+      }).sort((a, b) => a.forSort > b.forSort ? 1 : -1)
+      .map(a => a.original)
+    // ***********************************************************************
+
+    document.querySelector('#bands').innerHTML =
+      sortedBands2.map(band => `<li>${band}</li>`).join('');
+  </script>
+
+</body>
+
+</html>
